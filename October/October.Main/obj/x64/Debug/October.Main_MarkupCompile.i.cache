@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\App.xaml
-2-1752904222
+3351057667
 
-12-239835266
+15-522969892
 74-429659468
-MainWindow.xaml;Views\LoginWindow.xaml;
+Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\NavigationMainWindow.xaml;
 
 False
 

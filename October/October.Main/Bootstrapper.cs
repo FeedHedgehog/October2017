@@ -1,4 +1,4 @@
-﻿using October.Main.Views;
+﻿using October.Main;
 using Prism.Unity;
 using System;
 using System.Collections.Generic;

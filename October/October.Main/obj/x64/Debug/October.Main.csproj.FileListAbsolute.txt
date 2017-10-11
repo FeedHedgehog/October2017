@@ -19,12 +19,10 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Pri
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Prism.Unity.Wpf.xml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Prism.Wpf.xml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\October.Main.csprojResolveAssemblyReference.cache
-D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\MainWindow.g.cs
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\LoginWindow.g.cs
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\App.g.cs
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\October.Main_MarkupCompile.cache
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\October.Main_MarkupCompile.lref
-D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\MainWindow.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\LoginWindow.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\October.Main.g.resources
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\October.Main.Properties.Resources.resources
@@ -34,3 +32,7 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Oct
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\MainWindow.g.cs
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\NavigationMainWindow.g.cs
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\MainWindow.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\NavigationMainWindow.baml
