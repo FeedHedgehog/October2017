@@ -1,0 +1,17 @@
+﻿<acControls:BaseWindow x:Class="October.Main.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:acControls="clr-namespace:October.Component.Controls;assembly=October.Component.Controls"
+        xmlns:local="clr-namespace:October.Main.Views"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:prism="http://prismlibrary.com/"
+        mc:Ignorable="d"
+        ResizeMode="CanResize" 
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="LoginWindow" Height="300" Width="300">
+    <Grid>
+        
+    </Grid>
+</acControls:BaseWindow>

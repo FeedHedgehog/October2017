@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{E0D42985-AE1B-49BE-BE89-51FD084E251D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "October.Basic", "October.Basic", "{E0495822-26D4-4423-895C-99DC6EF96C2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "October.DataAccess", "October.DataAccess", "{51D9D64D-8036-435E-BB58-24E30787BB16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "October.Modules", "October.Modules", "{593C56A6-7E56-4C1A-95E1-7E968CA5976B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrapper", "Bootstrapper", "{2C508EA6-AF64-4A84-8CF8-0E600FEA0C4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3B266BA3-EEB7-4BD9-B0EF-ECA0B67694DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Startup", "Startup", "{2242BF86-5251-4DA6-8B7C-3CA1A06559F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "October.Main", "October.Main\October.Main.csproj", "{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "October.Component", "October.Component", "{4147EEB8-3461-4252-AF75-D1C343DC5101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "October.Component.Controls", "October.Component.Controls\October.Component.Controls.csproj", "{B6CCAC45-B386-4918-B08E-D061E986A6BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Debug|x64.ActiveCfg = Debug|x64
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Debug|x64.Build.0 = Debug|x64
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Release|x64.ActiveCfg = Release|x64
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6}.Release|x64.Build.0 = Release|x64
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Debug|x64.ActiveCfg = Debug|x64
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Debug|x64.Build.0 = Debug|x64
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Release|x64.ActiveCfg = Release|x64
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50EBE2E1-7B14-4025-9E64-53CFB4840DE6} = {2242BF86-5251-4DA6-8B7C-3CA1A06559F1}
+		{B6CCAC45-B386-4918-B08E-D061E986A6BE} = {4147EEB8-3461-4252-AF75-D1C343DC5101}
+	EndGlobalSection
+EndGlobal

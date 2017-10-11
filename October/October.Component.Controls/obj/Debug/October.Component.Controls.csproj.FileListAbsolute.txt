@@ -1,0 +1,6 @@
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\October.Component.Controls.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\October.Component.Controls.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Windows.Shell.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Windows.Shell.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls.pdb
