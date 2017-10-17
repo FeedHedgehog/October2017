@@ -1,4 +1,5 @@
 ﻿using October.Component.Controls;
+using October.Main.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,11 @@ namespace October.Main
         public LoginWindow()
         {
             InitializeComponent();
+            LoginWindowViewModel login = new LoginWindowViewModel();
+            login.CloseAction = new Action(this.Close);
+            this.DataContext = login;
+            //设置关闭
+            //(this.DataContext as LoginWindowViewModel).CloseAction = new Action(this.Close);
         }
     }
 }

@@ -12,6 +12,6 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="LoginWindow" Height="300" Width="300">
     <Grid>
-        
+        <Button x:Name="BtnLogin" Command="{Binding SubmitCommand}" ></Button>
     </Grid>
 </acControls:BaseWindow>
