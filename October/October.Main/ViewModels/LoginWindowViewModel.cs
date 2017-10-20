@@ -14,17 +14,20 @@ namespace October.Main.ViewModels
         #region Fields
 
         public Action CloseAction { get; set; }
-        public DelegateCommand SubmitCommand { get; private set; }
+        public DelegateCommand LoginCommand { get; private set; }
 
         #endregion
 
 
         public LoginWindowViewModel()
         {
-            this.SubmitCommand = new DelegateCommand(Submit);
+            this.LoginCommand = new DelegateCommand(Login);
         }
 
-        private void Submit()
+
+        #region Methods
+
+        private void Login()
         {
             ShowMainWindowAndAxWindow();
         }
@@ -37,10 +40,13 @@ namespace October.Main.ViewModels
 
             mainWin.WindowState = WindowState.Maximized;
             Application.Current.MainWindow = mainWin;
-            CloseAction();//根据客户要求，先关闭登录窗口，再加载动画by wwb 17/6/8
+            CloseAction();//根据客户要求，先关闭登录窗口，再加载动画
             //显示加载动画
             //ServiceLocator.Current.GetInstance<EventAggregator>().GetEvent<ShowWaitIndicatorEvent>().Publish(false);
             mainWin.Show();
         }
+
+        #endregion
+
     }
 }
