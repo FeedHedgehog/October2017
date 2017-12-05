@@ -89,6 +89,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -105,6 +106,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -114,12 +116,19 @@
     <Compile Include="ViewModels\LoginWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\NavigationMainWindowViewModel.cs" />
+    <Compile Include="Views\AxRenderWindow.xaml.cs">
+      <DependentUpon>AxRenderWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NavigationMainWindow.xaml.cs">
       <DependentUpon>NavigationMainWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\AxRenderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -172,6 +181,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\October.Component.BimViewer\October.Component.BimViewer.csproj">
+      <Project>{9820F2A1-7B43-4C75-8617-8E236DBD5555}</Project>
+      <Name>October.Component.BimViewer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\October.Component.Controls\October.Component.Controls.csproj">
       <Project>{B6CCAC45-B386-4918-B08E-D061E986A6BE}</Project>
       <Name>October.Component.Controls</Name>

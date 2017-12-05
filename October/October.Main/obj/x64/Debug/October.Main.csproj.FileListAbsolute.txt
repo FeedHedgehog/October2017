@@ -36,3 +36,9 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Vie
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\NavigationMainWindow.g.cs
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\MainWindow.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\NavigationMainWindow.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Component.BimViewer.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\AxInterop.BIM3DViewerLib.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Interop.BIM3DViewerLib.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Component.BimViewer.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\AxRenderWindow.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\AxRenderWindow.g.cs
