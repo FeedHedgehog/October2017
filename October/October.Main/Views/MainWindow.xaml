@@ -13,7 +13,19 @@
         WindowStartupLocation="Manual"
         ResizeMode="CanMinimize"        
         WindowState="Normal">
-    <Grid Width="100" Height="344">
-        <TextBlock Text="dsdadsad"></TextBlock>
+    <Grid Width="100" Height="344" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Background="Transparent">
+            
+            <MenuItem x:Name="menu1" Header="文件">
+                <MenuItem x:Name="menu2" Header="最近"></MenuItem>
+                <MenuItem x:Name="menu3" Header="关于"></MenuItem>
+            </MenuItem>
+            
+        </Menu>
     </Grid>
 </Window>
