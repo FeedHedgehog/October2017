@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:October.Component.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/BlackSkin.xaml"/>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/ImageResources.xaml"/>
+        <ResourceDictionary Source="/October.Component.Controls;component/Controls/ImageToggleButtonStyle.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

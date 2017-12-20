@@ -55,6 +55,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Utility">
+      <HintPath>..\October.Lib\Common.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.WPF">
+      <HintPath>..\October.Lib\Common.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -181,6 +187,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\October.Basic.Common\October.Basic.Common.csproj">
+      <Project>{A0A88BCD-9A2A-458C-88C0-4ECD9C64BF05}</Project>
+      <Name>October.Basic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\October.Basic.Models\October.Basic.Models.csproj">
+      <Project>{7595f402-04d4-420d-b7f0-280018dc883d}</Project>
+      <Name>October.Basic.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\October.Component.BimViewer\October.Component.BimViewer.csproj">
       <Project>{9820F2A1-7B43-4C75-8617-8E236DBD5555}</Project>
       <Name>October.Component.BimViewer</Name>

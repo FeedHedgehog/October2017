@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.ServiceLocation;
+﻿using Common.WPF.Helpers;
+using Microsoft.Practices.ServiceLocation;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace October.Main.ViewModels
         {
             MainWindow mainWin = ServiceLocator.Current.GetInstance<MainWindow>();
             //mainWin.Topmost = true;
-            //FullScreenHelper.RepairWpfWindowFullScreenBehavior(mainWin);
+            FullScreenHelper.RepairWpfWindowFullScreenBehavior(mainWin);
 
             mainWin.WindowState = WindowState.Maximized;
             Application.Current.MainWindow = mainWin;

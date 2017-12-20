@@ -42,3 +42,11 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Int
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Component.BimViewer.pdb
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\AxRenderWindow.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\Views\AxRenderWindow.g.cs
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Common.Utility.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Common.WPF.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Newtonsoft.Json.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\obj\x64\Debug\App.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Common.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Models.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Common.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Models.pdb

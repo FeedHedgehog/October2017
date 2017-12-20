@@ -1,0 +1,225 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+                    xmlns:local="clr-namespace:October.Component.Controls">
+
+
+    <local:NullOrEmptyToFalseConverter x:Key="nullOrEmptyToFalseConverter"/>
+
+    <ControlTemplate  x:Key="ImageToggleButtonTemplate" TargetType="{x:Type local:ImageToggleButton}">
+        <Border Background="{Binding Path=Background, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid Name="parentContainer"  Width="{TemplateBinding Width}"   Height="{TemplateBinding Height}" 
+                  HorizontalAlignment="Center" VerticalAlignment="Center" Background="{DynamicResource ToggleButtonBackground}">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="upRow" Height="*"></RowDefinition>
+                    <RowDefinition x:Name="downRow" Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="leftCol" Width="*"></ColumnDefinition>
+                    <ColumnDefinition x:Name="rightCol" Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="partImage"  Grid.Row="0" Grid.Column="0"  Source="{TemplateBinding NormalImage}"
+                     Opacity="{TemplateBinding NormalOpacity}"  Stretch="None"   HorizontalAlignment="Center" VerticalAlignment="Center"     />
+
+                <ContentControl x:Name="partContent"  Margin="0,8,0,0"  Grid.Row="1" Grid.Column="0" Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentControl>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleImagePlacement" Value="Left">
+                <Setter Property="Grid.Row" TargetName="partContent" Value="0"></Setter>
+                <Setter Property="Grid.Column" TargetName="partContent" Value="1"></Setter>
+            </Trigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding ImageWidth,  RelativeSource={RelativeSource Self}, Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                    <Condition Binding="{Binding ImageHeight, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Width" TargetName="partImage" Value="{Binding ImageWidth,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                    <Setter Property="Height" TargetName="partImage" Value="{Binding ImageHeight,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                    <Setter TargetName="partImage" Property="Stretch" Value="Uniform"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsMouseOver,RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding HoverImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="false"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Opacity" TargetName="partImage" Value="{Binding HoverOpacity,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding PressedImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="false"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Opacity" TargetName="partImage" Value="{Binding PressedOpacity,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsMouseOver,RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding HoverImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding HoverImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding PressedImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding PressedImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}"  Value="True"/>
+                    <Condition Binding="{Binding IsChecked,  RelativeSource={RelativeSource Self}}"  Value="true"/>
+                    <Condition Binding="{Binding ImageCheckedContent, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Content" TargetName="partContent" Value="{Binding ImageCheckedContent,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsChecked, RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding ToggleImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding ToggleImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                    <Setter Property="Opacity" TargetName="partImage" Value="{Binding ActiveOpacity,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="False"/>
+                    <Condition Binding="{Binding DisableImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding DisableImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+
+
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+
+    <ControlTemplate  x:Key="ImageToggleButtonTemplateWithoutOpacity" TargetType="{x:Type local:ImageToggleButton}">
+        <Border Background="{Binding Path=Background, RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid Name="parentContainer"  Width="{TemplateBinding Width}"   Height="{TemplateBinding Height}" 
+                  HorizontalAlignment="Center" VerticalAlignment="Center" Background="{DynamicResource ToggleButtonBackground}">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="upRow" Height="*"></RowDefinition>
+                    <RowDefinition x:Name="downRow" Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="leftCol" Width="*"></ColumnDefinition>
+                    <ColumnDefinition x:Name="rightCol" Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="partImage"  Grid.Row="0" Grid.Column="0"  Source="{TemplateBinding NormalImage}"
+                     Opacity="1.0"  Stretch="None"   HorizontalAlignment="Center" VerticalAlignment="Center"     />
+
+                <ContentControl x:Name="partContent"  Margin="0,8,0,0"  Grid.Row="1" Grid.Column="0" Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentControl>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleImagePlacement" Value="Left">
+                <Setter Property="Grid.Row" TargetName="partContent" Value="0"></Setter>
+                <Setter Property="Grid.Column" TargetName="partContent" Value="1"></Setter>
+            </Trigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding ImageWidth,  RelativeSource={RelativeSource Self}, Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                    <Condition Binding="{Binding ImageHeight, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Width" TargetName="partImage" Value="{Binding ImageWidth,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                    <Setter Property="Height" TargetName="partImage" Value="{Binding ImageHeight,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                    <Setter TargetName="partImage" Property="Stretch" Value="Uniform"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsMouseOver,RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding HoverImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding HoverImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding PressedImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding PressedImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}"  Value="True"/>
+                    <Condition Binding="{Binding IsChecked,  RelativeSource={RelativeSource Self}}"  Value="true"/>
+                    <Condition Binding="{Binding ImageCheckedContent, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Content" TargetName="partContent" Value="{Binding ImageCheckedContent,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="True"/>
+                    <Condition Binding="{Binding IsChecked, RelativeSource={RelativeSource Self}}" Value="true"/>
+                    <Condition Binding="{Binding ToggleImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding ToggleImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding IsEnabled,  RelativeSource={RelativeSource Self}}" Value="False"/>
+                    <Condition Binding="{Binding DisableImage, RelativeSource={RelativeSource Self},Converter={StaticResource nullOrEmptyToFalseConverter}}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="Source" TargetName="partImage" Value="{Binding DisableImage,  RelativeSource={RelativeSource FindAncestor, AncestorType=local:ImageToggleButton}}"></Setter>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="ImageToggleButtonStyle"  TargetType="{x:Type local:ImageToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template" Value="{StaticResource ImageToggleButtonTemplate}" />
+    </Style>
+
+    <Style x:Key="ImageToggleButtonWithoutOpacityStyle"  TargetType="{x:Type local:ImageToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template" Value="{StaticResource ImageToggleButtonTemplateWithoutOpacity}" />
+    </Style>
+
+</ResourceDictionary>

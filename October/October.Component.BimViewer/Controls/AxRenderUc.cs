@@ -15,6 +15,7 @@ namespace October.Component.BimViewer.Controls
         public AxRenderUc()
         {
             InitializeComponent();
+            
         }
     }
 }

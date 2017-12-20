@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:October.Main">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/October.Component.Controls;Component/Assets/Generic.xaml"/>
+                <ResourceDictionary Source="/October.Component.Controls;Component/Assets/Window/TopMenuStyle.xaml"/>
+
+                <!--这些资源放到APP里面才不报错，不知道为什么-->
+                <!--<ResourceDictionary Source="/October.Component.Controls;component/Assets/Controls/TreeViewStyle.xaml"/>
+                <ResourceDictionary Source="/October.Component.Controls;component/Assets/Controls/PopTreeComboboxStyle.xaml"/>
+                <ResourceDictionary Source="/October.Component.Controls;component/Assets/Controls/TreeListViewStyle.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

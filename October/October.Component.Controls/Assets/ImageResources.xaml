@@ -1,0 +1,349 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+                    xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell">
+    <!--search box-->
+
+    <BitmapImage x:Key="bg_sidebar_left" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_sidebar_left.png"></BitmapImage>
+    <BitmapImage x:Key="bgListSelect" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_listseleted.png"></BitmapImage>
+
+    <BitmapImage x:Key="btnSearchArrowDown" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/btn_arrowdown1.png"></BitmapImage>
+    <BitmapImage x:Key="btnSearchArrowUp" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/btn_arrowup.png"></BitmapImage>
+    <BitmapImage x:Key="btnGeometrydown" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/btn_down.png"></BitmapImage>
+    <BitmapImage x:Key="btnGeometryright" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/btn_right.png"></BitmapImage>
+    <BitmapImage x:Key="btnReturnBack" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/btn_back.png"></BitmapImage>
+    <BitmapImage x:Key="icSearchIcon" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_search1.png"></BitmapImage>
+
+    <BitmapImage x:Key="bg_search_click_big" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_search_click_big.png"></BitmapImage>
+    <BitmapImage x:Key="bg_search_hover_big" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_search_hover_big.png"></BitmapImage>
+    <BitmapImage x:Key="bg_search_click_small" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_search_click_small.png"></BitmapImage>
+    <BitmapImage x:Key="bg_search_hover_small" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_search_hover_small.png"></BitmapImage>
+
+    <BitmapImage x:Key="bg_dataMonitor_on" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_dataMonitor_on.png"></BitmapImage>
+    <BitmapImage x:Key="pic_camera_caozuotishi" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/pic_camera_caozuotishi.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_vedioDevice_jieping" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_vedioDevice_jieping.png"></BitmapImage>
+    <BitmapImage x:Key="ic_vedioDevice_jieping_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_vedioDevice_jieping_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_vedioDevice_tiaozheng" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_vedioDevice_tiaozheng.png"></BitmapImage>
+    <BitmapImage x:Key="ic_vedioDevice_tiaozheng_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_vedioDevice_tiaozheng_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_vedioDevice_touping" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_vedioDevice_touping.png"></BitmapImage>
+    <BitmapImage x:Key="ic_vedioDevice_touping_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_vedioDevice_touping_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_fangbei" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_fangbei.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_fangbei_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_fangbei_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_guangquan" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_guangquan.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_guangquan_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_guangquan_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_jujiao" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_jujiao.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_jujiao_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_jujiao_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_shang" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_shang.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_shang_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_shang_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_xia" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_xia.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_xia_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_xia_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_zuo" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_zuo.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_zuo_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_zuo_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_you" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_you.png"></BitmapImage>
+    <BitmapImage x:Key="ic_videoMonitor_you_act" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/ic_videoMonitor_you_act.png"></BitmapImage>
+
+    <!--title on the right top-->
+    <BitmapImage x:Key="bg_ALERT1" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_ALERT1.png"></BitmapImage>
+    <BitmapImage x:Key="bg_ALERT2" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_ALERT2.png"></BitmapImage>
+    <BitmapImage x:Key="bg_ALERT3" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_ALERT3.png"></BitmapImage>
+    <BitmapImage x:Key="bg_ALERT4" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_ALERT4.png"></BitmapImage>
+    <BitmapImage x:Key="bg_AlertLeft" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_AlertLeft.png"></BitmapImage>
+    <BitmapImage x:Key="btn_location" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_location.png"></BitmapImage>
+    <BitmapImage x:Key="bg_sidebar_right" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_sidebar_right.png"></BitmapImage>
+    <BitmapImage x:Key="bg_topbar" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_topbar.png"></BitmapImage>
+    <BitmapImage x:Key="bg_topbarmenu" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_topbarmenu.png"></BitmapImage>
+    <BitmapImage x:Key="btn_airplay1" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_airplay1.png"></BitmapImage>
+    <BitmapImage x:Key="btn_airplay1_p" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_airplay1_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_close2" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_close2.png"></BitmapImage>
+    <BitmapImage x:Key="btn_daiban" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_daiban.png"></BitmapImage>
+    <BitmapImage x:Key="btn_daiban_p" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_daiban_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_gonggao" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_gonggao.png"></BitmapImage>
+    <BitmapImage x:Key="btn_gonggao_p" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_gonggao_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_rili" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_riheng.png"></BitmapImage>
+    <BitmapImage x:Key="btn_rili_p" UriSource="/October.Component.Controls;component/Images/MainWindow/btn_riheng_p.png"></BitmapImage>
+
+    <BitmapImage x:Key="image_Add" UriSource="/October.Component.Controls;component/Images/image_Add.png"></BitmapImage>
+    <BitmapImage x:Key="image_Add2" UriSource="/October.Component.Controls;component/Images/image_Add2.png"></BitmapImage>
+    <BitmapImage x:Key="image_ic_tianjia" UriSource="/October.Component.Controls;component/Images/ic_tianjia.png"></BitmapImage>
+    <BitmapImage x:Key="ic_check3_green" UriSource="/October.Component.Controls;component/Images/ic_check3_green.png"></BitmapImage>
+    <BitmapImage x:Key="ic_form_hint" UriSource="/October.Component.Controls;component/Images/ic_form_hint.png"></BitmapImage>
+    <BitmapImage x:Key="btn_add_item" UriSource="/October.Component.Controls;component/Images/btn_add_item.png"></BitmapImage>
+    <BitmapImage x:Key="btn_add_item_green" UriSource="/October.Component.Controls;component/Images/btn_add_item_green.png"></BitmapImage>
+    <BitmapImage x:Key="btn_remove_item" UriSource="/October.Component.Controls;component/Images/btn_remove_item.png"></BitmapImage>
+    <BitmapImage x:Key="ic_arrow_Backward2_blue" UriSource="/October.Component.Controls;component/Images/ic_arrow_Backward2_blue.png"></BitmapImage>
+    <BitmapImage x:Key="ic_arrow_pulldown" UriSource="/October.Component.Controls;component/Images/ic_arrow_pulldown.png"></BitmapImage>
+    <BitmapImage x:Key="ic_arrow_pulldown_blue" UriSource="/October.Component.Controls;component/Images/ic_arrow_pulldown_blue.png"></BitmapImage>
+    <BitmapImage x:Key="ic_delete1_blue" UriSource="/October.Component.Controls;component/Images/ic_delete1_blue.png"></BitmapImage>
+    <BitmapImage x:Key="ic_particulars_blue" UriSource="/October.Component.Controls;component/Images/ic_particulars_blue.png"></BitmapImage>
+    <BitmapImage x:Key="ic_search_blue" UriSource="/October.Component.Controls;component/Images/ic_search_blue.png"></BitmapImage>
+
+    <BitmapImage x:Key="btn_array1" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array1.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array1_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array1_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array2" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array2.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array2_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array2_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array3" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array3.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array3_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array3_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array4" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array4.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array4_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array4_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array5" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array5.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array5_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array5_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array6" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array6.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array6_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array6_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array7" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array7.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array7_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array7_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array8" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array8.png"></BitmapImage>
+    <BitmapImage x:Key="btn_array8_p" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_array8_p.png"></BitmapImage>
+    <BitmapImage x:Key="btn_backward" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_backward.png"></BitmapImage>
+    <BitmapImage x:Key="btn_close3" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_close3.png"></BitmapImage>
+    <BitmapImage x:Key="btn_daofang" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_daofang.png"></BitmapImage>
+    <BitmapImage x:Key="btn_fangda2" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_fangda2.png"></BitmapImage>
+    <BitmapImage x:Key="btn_fastforward" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_fastforward.png"></BitmapImage>
+    <BitmapImage x:Key="btn_guding" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_guding.png"></BitmapImage>
+    <BitmapImage x:Key="btn_huamian" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_huamian.png"></BitmapImage>
+    <BitmapImage x:Key="btn_huifang" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_huifang.png"></BitmapImage>
+    <BitmapImage x:Key="btn_last" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_last.png"></BitmapImage>
+    <BitmapImage x:Key="btn_left" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_left.png"></BitmapImage>
+    <BitmapImage x:Key="btn_next" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_next.png"></BitmapImage>
+    <BitmapImage x:Key="btn_pause" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_pause.png"></BitmapImage>
+    <BitmapImage x:Key="btn_preset2" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_preset2.png"></BitmapImage>
+    <BitmapImage x:Key="btn_right" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_right.png"></BitmapImage>
+    <BitmapImage x:Key="btn_screenshot" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_screenshot.png"></BitmapImage>
+    <BitmapImage x:Key="btn_suoxiao2" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_suoxiao2.png"></BitmapImage>
+    <BitmapImage x:Key="btn_up" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_up.png"></BitmapImage>
+    <BitmapImage x:Key="btn_voice" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_voice.png"></BitmapImage>
+    <BitmapImage x:Key="btn_xunhuan" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_xunhuan.png"></BitmapImage>
+    <BitmapImage x:Key="ic_aperture" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_aperture.png"></BitmapImage>
+    <BitmapImage x:Key="ic_fangbei" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_fangbei.png"></BitmapImage>
+    <BitmapImage x:Key="ic_focus" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_focus.png"></BitmapImage>
+    <BitmapImage x:Key="ic_play" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_play.png"></BitmapImage>
+    <BitmapImage x:Key="ic_shouqi" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_shouqi.png"></BitmapImage>
+    <BitmapImage x:Key="ic_shouqi_s" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_shouqi_s.png"></BitmapImage>
+    <BitmapImage x:Key="ic_unplay" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_unplay.png"></BitmapImage>
+    <BitmapImage x:Key="ic_zhankai" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_zhankai.png"></BitmapImage>
+    <BitmapImage x:Key="ic_zhankai_s" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/ic_zhankai_s.png"></BitmapImage>
+    <BitmapImage x:Key="btn_down" UriSource="/October.Component.Controls;component/Images/MainWindow/VideoMonitor/btn_down.png"></BitmapImage>
+
+
+    <!--toolbar under right bottom-->
+    <BitmapImage x:Key="btn_switch_on" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/switch_on.png"></BitmapImage>
+    <BitmapImage x:Key="btn_switch_off" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/switch_off.png"></BitmapImage>
+    <BitmapImage x:Key="bg_mapoperation1" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/bg_mapoperation1.png"></BitmapImage>
+    <BitmapImage x:Key="bg_mapoperation2" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/bg_mapoperation2.png"></BitmapImage>
+    <BitmapImage x:Key="btn_unseleted" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/btn_unseleted.png"></BitmapImage>
+    <BitmapImage x:Key="btn_fangda1" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/btn_fangda1.png"></BitmapImage>
+    <BitmapImage x:Key="btn_suoxiao1" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/btn_suoxiao1.png"></BitmapImage>
+    <BitmapImage x:Key="btn_eye" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/btn_eye.png"></BitmapImage>
+    <BitmapImage x:Key="bg_on" UriSource="/October.Component.Controls;component/Images/MainWindow/bg_on.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_mapTool_celiang_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_celiang_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_celiang" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_celiang.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_jujiao_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_jujiao_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_jujiao" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_jujiao.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_manyou_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_manyou_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_manyou" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_manyou.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_map_fangda" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_map_fangda.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_suoxiao" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_suoxiao.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_nenghao_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_nenghao_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_nenghao" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_nenghao.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_pouqie_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_pouqie_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_pouqie" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_pouqie.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_shitu_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_shitu_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_shitu" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_shitu.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_touming_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_touming_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_touming" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_touming.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_xianshi_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_xianshi_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_xianshi" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_xianshi.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_zhuashou" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_zhuashou.png"></BitmapImage>
+    <BitmapImage x:Key="ic_zhuashou" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_zhuashou.png"></BitmapImage>
+    <BitmapImage x:Key="ic_select_act" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_select_act.png"></BitmapImage>
+    <BitmapImage x:Key="ic_select" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_select.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_mapTool_guanlang" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_guanlang.png"></BitmapImage>
+    <BitmapImage x:Key="ic_mapTool_qiehuan" UriSource="/October.Component.Controls;component/Images/MainWindow/ToolBar/ic_mapTool_qiehuan.png"></BitmapImage>
+
+    <!--other-->    
+    <BitmapImage x:Key="bg_search" UriSource="/October.Component.Controls;component/Images/MainWindow/Search/bg_search.png"></BitmapImage>
+
+    <!--Login-->
+    <BitmapImage x:Key="bg_login" UriSource="/October.Component.Controls;component/Images/LoginWindow/bg_login.png"></BitmapImage>
+    <BitmapImage x:Key="logo_login" UriSource="/October.Component.Controls;component/Images/LoginWindow/logo_login.png"></BitmapImage>
+    <BitmapImage x:Key="btn_enter" UriSource="/October.Component.Controls;component/Images/LoginWindow/btn_enter.png"></BitmapImage>
+    <BitmapImage x:Key="btn_enter_dis" UriSource="/October.Component.Controls;component/Images/LoginWindow/btn_enter_dis.png"></BitmapImage>
+    <BitmapImage x:Key="cb_checked" UriSource="/October.Component.Controls;component/Images/LoginWindow/cb_checked.png"></BitmapImage>
+    <BitmapImage x:Key="cb_uncheck" UriSource="/October.Component.Controls;component/Images/LoginWindow/cb_uncheck.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_query_EnergyConsumption" UriSource="/October.Component.Controls;component/Images/search_hover.png"></BitmapImage>
+
+    <!--Home page Menu icon-->
+    <BitmapImage x:Key="btn_WinRestoreHover" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinRestoreHover.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinRestoreNormal" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinRestoreNormal.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinMaxHover" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinMaxHover.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinMaxNormal" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinMaxNormal.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinMinNormal" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinMinNormal.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinMinHover" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinMinHover.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinCloseNormal" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinCloseNormal.png"></BitmapImage>
+    <BitmapImage x:Key="btn_WinCloseHover" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/btn_WinCloseHover.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_NFCBar_daiban" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_daiban.png"></BitmapImage>
+    <BitmapImage x:Key="ic_NFCBar_daiban_act" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_daiban_act.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_NFCBar_gonggao" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_gonggao.png"></BitmapImage>
+    <BitmapImage x:Key="ic_NFCBar_gonggao_act" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_gonggao_act.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_NFCBar_rili" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_rili.png"></BitmapImage>
+    <BitmapImage x:Key="ic_NFCBar_rili_act" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_rili_act.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_NFCBar_touping" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_touping.png"></BitmapImage>
+    <BitmapImage x:Key="ic_NFCBar_touping_act" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_touping_act.png"></BitmapImage>
+
+    <BitmapImage x:Key="ic_NFCBar_xinfeng" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_xinfeng.png"></BitmapImage>
+    <BitmapImage x:Key="ic_NFCBar_xinfeng_act" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_NFCBar_xinfeng_act.png"></BitmapImage>
+
+
+    <BitmapImage x:Key="ic_arrow_left" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_arrow_left.png"></BitmapImage>
+    <BitmapImage x:Key="ic_arrow_right" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_arrow_right.png"></BitmapImage>
+
+    <BitmapImage x:Key="bg_youcecaidan" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/bg_youcecaidan.png"></BitmapImage>
+
+    <!--schedule page-->
+    <BitmapImage x:Key="btn_enlarge" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_cal_enlarge.png"></BitmapImage>
+    <BitmapImage x:Key="btn_enlarge_p" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/ic_cal_enlarge_act.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_ScheduleNext" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/Btn_ScheduleNext.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_ScheduleUp" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/Btn_ScheduleUp.png"></BitmapImage>
+    <BitmapImage x:Key="Img_IsSchedule" UriSource="/October.Component.Controls;component/Images/MainWindow/MainMenuIcon/Img_IsSchedule.png"></BitmapImage>
+
+
+
+    <!--realtime monitor-->
+    <BitmapImage x:Key="rm_bg_daping" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_daping.jpg"></BitmapImage>
+    <BitmapImage x:Key="rm_bg_off" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_off.png"></BitmapImage>
+    <BitmapImage x:Key="rm_bg_on" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_on.png"></BitmapImage>
+    <BitmapImage x:Key="rm_bg_riskblue" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_riskblue.png"></BitmapImage>
+    <BitmapImage x:Key="rm_bg_riskorange" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_riskorange.png"></BitmapImage>
+    <BitmapImage x:Key="rm_bg_riskred" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_riskred.png"></BitmapImage>
+    <BitmapImage x:Key="rm_bg_riskyellow" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/bg_riskyellow.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_advance_dis" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_advance_dis.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_advance_dis_p" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_advance_dis_p.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_back_dis" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_back_dis.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_back_dis_p" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_back_dis_p.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_fengji" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_fengji.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_shuibeng2" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_shuibeng2.png"></BitmapImage>
+    <BitmapImage x:Key="rm_ic_zhaoming3" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/ic_zhaoming3.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_blue" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_blue.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_blue_s" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_blue_s.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_orange" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_orange.png"></BitmapImage>
+    <BitmapImage x:Key="point_orange_s" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_orange_s.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_red" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_red.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_red_s" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_red_s.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_yellow" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_yellow.png"></BitmapImage>
+    <BitmapImage x:Key="rm_point_yellow_s" UriSource="/October.Component.Controls;component/Images/MainWindow/RealTimeMonitor/point_yellow_s.png"></BitmapImage>
+
+
+
+    <!--Navigation page Menu icon-->
+    <BitmapImage x:Key="Navigation_Home" UriSource="/October.Component.Controls;component/Images/NavigateIocn/Home.png"></BitmapImage>
+    <!--right-->
+    <BitmapImage x:Key="Navigation_ic_advance_dis" UriSource="/October.Component.Controls;component/Images/NavigateIocn/ic_advance_dis.png"></BitmapImage>
+    <BitmapImage x:Key="Navigation_ic_advance_dis_p" UriSource="/October.Component.Controls;component/Images/NavigateIocn/ic_advance_dis_p.png"></BitmapImage>
+    <!--left-->
+    <BitmapImage x:Key="Navigation_ic_back_dis" UriSource="/October.Component.Controls;component/Images/NavigateIocn/ic_back_dis.png"></BitmapImage>
+    <BitmapImage x:Key="Navigation_ic_back_dis_p" UriSource="/October.Component.Controls;component/Images/NavigateIocn/ic_back_dis_p.png"></BitmapImage>
+
+    <!-- CustomCtrl -->
+    <BitmapImage x:Key="Ctrl_CheckBoxChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_CheckBoxChecked.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_CheckBoxDefault" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_CheckBoxDefault.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_CheckBoxPop" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_CheckBoxPop.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_ComboxExtend" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_ComboxExtend.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_ComboxExtendChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_ComboxExtendChecked.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_ComboxShrink" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_ComboxShrink.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_ComboxShrinkChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_ComboxShrinkChecked.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_PagingComboBox" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PagingComboBox.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_PagingNext" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PagingNext.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_PagingUp" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PagingUp.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_PagingNextChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PagingNextChecked.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_PagingUpChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PagingUpChecked.png"></BitmapImage>
+    <BitmapImage x:Key="Ctrl_Remove" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_Remove.png" />
+    <BitmapImage x:Key="Ctrl_RemoveChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_RemoveChecked.png" />
+    <BitmapImage x:Key="Ctrl_SearchClear" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_SearchClear.png" />
+    <BitmapImage x:Key="Ctrl_SearchCombox" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_SearchCombox.png" />
+    <BitmapImage x:Key="Ctrl_SearchDefault" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_SearchDefault.png" />
+    <BitmapImage x:Key="Ctrl_PictureClose" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PictureClose.png" />
+    <BitmapImage x:Key="Ctrl_PictureNext" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PictureNext.png" />
+    <BitmapImage x:Key="Ctrl_PictureUp" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_PictureUp.png" />
+    <BitmapImage x:Key="Ctrl_Pulldown" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_Pulldown.png" />
+    <BitmapImage x:Key="Ctrl_Add" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_Add.png" />
+    <BitmapImage x:Key="Ctrl_HeadPortrait" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_HeadPortrait.png" />
+    <BitmapImage x:Key="Ctrl_Loading" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_Loading.png" />
+    <BitmapImage x:Key="Ctrl_IntAdd" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_IntAdd.png" />
+    <BitmapImage x:Key="Ctrl_IntAddChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_IntAddChecked.png" />
+    <BitmapImage x:Key="Ctrl_IntRemove" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_IntRemove.png" />
+    <BitmapImage x:Key="Ctrl_IntRemoveChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_IntRemoveChecked.png" />
+    <BitmapImage x:Key="Ctrl_DataSelect" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_DataSelect.png" />
+    <BitmapImage x:Key="Ctrl_DataSelectChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Ctrl_DataSelectChecked.png" />
+   
+
+    <!--BtnChecked-->
+    <BitmapImage x:Key="Btn_DeleteChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_DeleteChecked.png" />
+    <BitmapImage x:Key="Btn_EditChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_EditChecked.png" />
+    <BitmapImage x:Key="Btn_PrintChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_PrintChecked.png" />
+    <BitmapImage x:Key="Btn_FiltrateChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_FiltrateChecked.png" />
+    <BitmapImage x:Key="Btn_ThumbnailChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_ThumbnailChecked.png" />
+    <BitmapImage x:Key="Btn_FlowChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_FlowChecked.png" />
+    <BitmapImage x:Key="Btn_AddChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_AddChecked.png" />
+    <BitmapImage x:Key="Btn_RegisterChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_RegisterChecked.png" />
+    <BitmapImage x:Key="Btn_RemoveChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_RemoveChecked.png" />
+    <BitmapImage x:Key="Btn_KoazaChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_KoazaChecked.png" />
+    <BitmapImage x:Key="Btn_UpsilonChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_UpsilonChecked.png" />
+    <BitmapImage x:Key="Btn_ImgDeleteChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_ImgDeleteChecked.png" />
+    <BitmapImage x:Key="Btn_OrderDownChecked" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_OrderDownChecked.png" />
+    <BitmapImage x:Key="Btn_OrderUpChecked" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_OrderUpChecked.png" />
+    <BitmapImage x:Key="Btn_CardCloseChecked" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_CardCloseChecked.png" />
+
+
+    <!--BtnNormal-->
+    <BitmapImage x:Key="Btn_Success" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Success.png" />
+    <BitmapImage x:Key="Btn_Thumbnail" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Thumbnail.png" />
+    <BitmapImage x:Key="Btn_Filtrate" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Filtrate.png" />
+    <BitmapImage x:Key="Btn_Delete" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Delete.png" />
+    <BitmapImage x:Key="Btn_Edit" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Edit.png" />
+    <BitmapImage x:Key="Btn_Print" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Print.png" />
+    <BitmapImage x:Key="Btn_Refresh" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Refresh.png" />
+    <BitmapImage x:Key="Btn_Flow" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Flow.png" />
+    <BitmapImage x:Key="Btn_Add" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Add.png" />
+    <BitmapImage x:Key="Btn_Register" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Register.png" />
+    <BitmapImage x:Key="Btn_Remove" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Remove.png" />
+    <BitmapImage x:Key="Btn_Location" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Location.png" />
+    <BitmapImage x:Key="Btn_Koaza" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Koaza.png" />
+    <BitmapImage x:Key="Btn_Upsilon" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_Upsilon.png" />
+    <BitmapImage x:Key="Btn_ImgDelete" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_ImgDelete.png" />
+    <BitmapImage x:Key="Btn_OrderDown" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_OrderDown.png" />
+    <BitmapImage x:Key="Btn_OrderUp" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_OrderUp.png" />
+    <BitmapImage x:Key="Btn_CardClose" UriSource="/October.Component.Controls;component/Images/CommonImage/Btn_CardClose.png" />
+
+
+    <!--DataOption-->
+    <BitmapImage x:Key="Data_ErrorHint" UriSource="/October.Component.Controls;component/Images/CommonImage/Data_ErrorHint.png" />
+    <BitmapImage x:Key="Data_Person" UriSource="/October.Component.Controls;component/Images/CommonImage/Data_Person.png" />
+    <BitmapImage x:Key="Data_ErrorIcon" UriSource="/October.Component.Controls;component/Images/CommonImage/Data_ErrorIcon.png" />
+    <BitmapImage x:Key="Data_Marker" UriSource="/October.Component.Controls;component/Images/CommonImage/Data_Marker.png" />
+
+    <!--PopWindow-->
+    <BitmapImage x:Key="Btn_NavHome" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_NavHome.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_NavUp" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_NavUp.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_NavNext" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_NavNext.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_PopClose" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_PopClose.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_PopMax" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_PopMax.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_PopMin" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_PopMin.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_Restore" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_Restore.png"></BitmapImage>
+    <BitmapImage x:Key="Btn_MsgClose" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_MsgClose.png"></BitmapImage>
+
+    <BitmapImage x:Key="Btn_Classify" UriSource="/October.Component.Controls;component/Images/PopWindow/Btn_Classify.png"></BitmapImage>
+    <!-- TreeItem -->
+    <BitmapImage x:Key="TreeItem_fold" UriSource="/October.Component.Controls;component/Images/PopWindow/TreeItem_fold.png"></BitmapImage>
+    <BitmapImage x:Key="TreeItem_unfold" UriSource="/October.Component.Controls;component/Images/PopWindow/TreeItem_unfold.png"></BitmapImage>
+    <BitmapImage x:Key="TreeItem_select" UriSource="/October.Component.Controls;component/Images/PopWindow/TreeItem_select.png"></BitmapImage>
+    <BitmapImage x:Key="TreeItem_normal" UriSource="/October.Component.Controls;component/Images/PopWindow/TreeItem_normal.png"></BitmapImage>
+
+    <!-- AssetManager -->
+    <BitmapImage x:Key="ic_arrow_back1" UriSource="/October.Component.Controls;component/Images/PopWindow/ic_arrow_back1.png"></BitmapImage>
+</ResourceDictionary>

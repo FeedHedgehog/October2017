@@ -11,7 +11,7 @@
         ResizeMode="CanResize" 
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="LoginWindow" Height="300" Width="300">
-    <Grid>
+    <Grid>    
         <Button x:Name="BtnLogin" Command="{Binding LoginCommand}" ></Button>
     </Grid>
 </acControls:BaseWindow>

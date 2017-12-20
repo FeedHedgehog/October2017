@@ -4,28 +4,241 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        xmlns:local="clr-namespace:October.Main"        
+        xmlns:local="clr-namespace:October.Main"  
+        xmlns:models ="clr-namespace:October.Basic.Models;assembly=October.Basic.Models"
+        xmlns:acControls="clr-namespace:October.Component.Controls;assembly=October.Component.Controls"
+         xmlns:converters="clr-namespace:October.Component.Controls.Converters;assembly=October.Component.Controls"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="管廊运营"
+        Title="xx系统运营平台"
         x:Name="mainWindow" ShowInTaskbar="False"
         AllowsTransparency="True" WindowStyle="None"         
         WindowStartupLocation="Manual"
         ResizeMode="CanMinimize"        
-        WindowState="Normal">
-    <Grid Width="100" Height="344" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="30"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Menu Background="Transparent">
-            
-            <MenuItem x:Name="menu1" Header="文件">
-                <MenuItem x:Name="menu2" Header="最近"></MenuItem>
-                <MenuItem x:Name="menu3" Header="关于"></MenuItem>
-            </MenuItem>
-            
-        </Menu>
+        WindowState="Maximized">
+    <Window.Resources>
+        <!-- Converters -->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:ValueSubtractParaConverter x:Key="valueSubtractParaConverter" />
+        <converters:ValueParamCompareToVisibilityConverter x:Key="valueParamCompareToVisibilityConverter" />
+        <!-- Controls -->
+        <Style TargetType="{x:Type ComboBox}" x:Key="TSpeedButtonStyle">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource MainToolBackground}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="PopupOpenAnimation" >
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" BeginTime="00:00:00">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="340"/>
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.4" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="PopupCloseAnimation" >
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" BeginTime="00:00:00">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.4" Value="340"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid x:Name="PART_Root">
+                            <Grid>
+                                <Image Grid.ZIndex="300"  Height="5" Width="5" Margin="0 4 2 0" HorizontalAlignment="Right" VerticalAlignment="Top"
+                                       Visibility="{TemplateBinding acControls:ControlAttachProperty.HasInfos,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                <acControls:ImageToggleButton Grid.ZIndex="0" 
+                                      ImageHeight="20" ImageWidth="20"  ToolTip="{TemplateBinding ToolTip}" 
+                                      IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"             
+                                      NormalImage="{TemplateBinding acControls:ControlAttachProperty.ImgBtnNormalSource}"
+                                      ToggleImage="{TemplateBinding acControls:ControlAttachProperty.ImgBtnCheckedSource}"  />
+                            </Grid>
+                            <!--弹出下拉控件-->
+                            <Popup x:Name="PART_Popup" AllowsTransparency="True"  Focusable="False" Placement="Bottom"
+                               IsOpen="True" 
+                               PopupAnimation="None">
+                                <Border Width="340" BorderThickness="0">
+                                    <ContentControl x:Name="PART_Content" HorizontalAlignment="Stretch" 
+                                                    KeyboardNavigation.DirectionalNavigation="Contained"
+                                                    HorizontalContentAlignment="Stretch"
+                                                    Content="{TemplateBinding acControls:ControlAttachProperty.CustomContent}">
+                                        <ContentControl.RenderTransform>
+                                            <TranslateTransform  X="340"/>
+                                        </ContentControl.RenderTransform>
+                                    </ContentControl>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDropDownOpen" Value="true" >
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource PopupOpenAnimation}"/>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource PopupCloseAnimation}"/>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <!--菜单展开背景-->
+        <Grid  Panel.ZIndex="0" Height="{Binding MenuItemActualHeight}" 
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"   >
+            <Grid.Background>
+                <ImageBrush ImageSource="{DynamicResource bg_topbarmenu}"/>
+            </Grid.Background>
+        </Grid>
+
+
+        <!--顶部菜单-->
+        <Grid Name="TitleMenuContainer" Panel.ZIndex="1" Height="80" 
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    MouseLeftButtonDown="TitleMenuContainer_MouseLeftButtonDown">
+            <Grid.Background>
+                <ImageBrush ImageSource="{DynamicResource bg_topbar}"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!--左侧菜单-->
+            <Grid Name="LeftMenu" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="74"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Margin="30 -2 0 0" Width="32" Height="32" HorizontalAlignment="Left"  />
+                <TextBlock Grid.Column="1" Text="xx软件系统运营平台"  x:Name="tbTitle" 
+                               VerticalAlignment="Center"  FontSize="20"   Margin="15 0 0 0"  FontWeight="Bold" Focusable="True"
+                               FontStyle="Normal"  Foreground="{DynamicResource MainWindowForeground}"  HorizontalAlignment="Left"  />
+                <Menu Grid.Column="2" Name="mainMenu"
+                    Margin="30,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    ItemsSource="{Binding MenuList,UpdateSourceTrigger=PropertyChanged}"                     
+                    Style="{DynamicResource MainMenuStyle}">
+                    <Menu.ItemContainerStyle>
+                        <Style BasedOn="{StaticResource MainMenuItemStyle}" TargetType="{x:Type MenuItem}"/>
+                    </Menu.ItemContainerStyle>
+                </Menu>
+            </Grid>
+
+            <!--右侧菜单-->
+            <StackPanel Grid.Column="1" Height="{Binding ActualHeight, ElementName=LeftMenu, Mode=OneWay}" 
+                        Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                    <TextBlock Text="{Binding CurrentUserName}"  VerticalAlignment="Center" FontSize="14" Margin="0,0,15,0"
+                      ToolTip="当前用户" FontStyle="Normal"   Foreground="{DynamicResource MainWindowForeground}" />
+                    <Menu VerticalAlignment="Center" ToolTip="当前用户对象的角色"
+                    ItemsSource="{Binding UserMenuList,UpdateSourceTrigger=PropertyChanged}" Margin="0 0 15 0"
+                    Style="{DynamicResource UserMenuStyle}">
+                        <Menu.ItemContainerStyle>
+                            <Style BasedOn="{StaticResource UserMenuItemStyle}" TargetType="{x:Type MenuItem}"/>
+                        </Menu.ItemContainerStyle>
+                    </Menu>
+                    <ComboBox x:Name="backlog" Style="{StaticResource TSpeedButtonStyle}" Margin="0 8 0 0"
+                              IsDropDownOpen="{Binding BacklogIsChecked,Mode=TwoWay}"
+                              acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_daiban_act}"
+                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_daiban}"
+                              acControls:ControlAttachProperty.HasInfos="{Binding  ElementName=backlogContent,Path=DataContext.HasInfos,UpdateSourceTrigger=PropertyChanged}"
+                              ToolTip="待办事项">
+                        <!--<acControls:ControlAttachProperty.CustomContent>
+                            <acControls:Backlog x:Name="backlogContent" Height="{Binding ElementName=Content,Path=ActualHeight}" />
+                        </acControls:ControlAttachProperty.CustomContent>-->
+                    </ComboBox>
+                    <ComboBox x:Name="alertList" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
+                              IsDropDownOpen="{Binding AlertListIsChecked,Mode=TwoWay}"
+                              acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_gonggao_act}"
+                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_gonggao}"
+                              acControls:ControlAttachProperty.HasInfos="{Binding ElementName=alertContent,Path=DataContext.HasInfos,UpdateSourceTrigger=PropertyChanged}"
+                              
+                              ToolTip="报警列表">
+                        <!--<acControls:ControlAttachProperty.CustomContent>
+                            <acControls:AlertList x:Name="alertContent" Height="{Binding ElementName=Content,Path=ActualHeight}" />
+                        </acControls:ControlAttachProperty.CustomContent>-->
+                    </ComboBox>
+                    <ComboBox x:Name="systemNotice" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
+                              IsDropDownOpen="{Binding SystemNoticeIsChecked,Mode=TwoWay}"
+                              acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_xinfeng_act}"
+                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_xinfeng}"
+                              acControls:ControlAttachProperty.HasInfos="{Binding ElementName=systemNoticeContent,Path=DataContext.HasInfos,UpdateSourceTrigger=PropertyChanged}"
+                              ToolTip="系统公告">
+                        <!--<acControls:ControlAttachProperty.CustomContent>
+                            <acControls:SystemNotice x:Name="systemNoticeContent"  Height="{Binding ElementName=Content,Path=ActualHeight}" />
+                        </acControls:ControlAttachProperty.CustomContent>-->
+                    </ComboBox>
+                    <ComboBox x:Name="schedule" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
+                              IsDropDownOpen="{Binding WorkScheduleIsChecked,Mode=TwoWay}"
+                              acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_rili_act}"
+                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_rili}"
+                              acControls:ControlAttachProperty.HasInfos="False"
+                              ToolTip="工作日程">
+                        <!--<acControls:ControlAttachProperty.CustomContent>
+                            <acControls:Schedule Height="{Binding ElementName=Content,Path=ActualHeight}" />
+                        </acControls:ControlAttachProperty.CustomContent>-->
+                    </ComboBox>
+                    <!--<acControls:ImageToggleButton Style="{StaticResource ImageToggleButtonStyle}"
+                                      ImageHeight="20" ImageWidth="20" Margin="15 8 0 0"
+                                      ToolTip="大屏实时监控"  Focusable="False" Command="{Binding ShowRealtimeMonitorCommand}"    
+                                      NormalImage="{StaticResource btn_airplay1}"
+                                      HoverImage="{StaticResource btn_airplay1_p}"  />-->
+
+                    <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                                      ImageHeight="20" ImageWidth="20" Margin="15 8 0 0"
+                                      ToolTip="视频监控"  Focusable="False"  
+                                     
+                                      NormalImage="{DynamicResource btn_airplay1}"
+                                      ToggleImage="{DynamicResource btn_airplay1_p}" 
+                                      />
+                </StackPanel>
+
+                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                            ImageHeight="24" ImageWidth="24" Margin="15 8 0 0"
+                            NormalImage="{DynamicResource btn_WinMinNormal}"
+                            HoverImage="{DynamicResource btn_WinMinHover}"
+                            Command="{Binding StatusChangeCommand}"
+                            CommandParameter="{x:Static models:WindowChangeEnum.Min}"/>
+
+                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                            Visibility="{Binding ElementName=mainWindow,Path=WindowState,Converter={StaticResource valueParamCompareToVisibilityConverter},ConverterParameter='Maximized'}"                 
+                            ImageHeight="24" ImageWidth="24" Margin="3 8 0 0"
+                            NormalImage="{DynamicResource btn_WinMaxNormal}"
+                            HoverImage="{DynamicResource btn_WinMaxHover}"
+                            Command="{Binding StatusChangeCommand}"
+                            CommandParameter="{x:Static models:WindowChangeEnum.Max}"/>
+
+                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                             Visibility="{Binding ElementName=mainWindow,Path=WindowState,Converter={StaticResource valueParamCompareToVisibilityConverter},ConverterParameter='Normal'}"                     
+                            ImageHeight="24" ImageWidth="24" Margin="3 8 0 0"
+                            NormalImage="{DynamicResource btn_WinRestoreNormal}"
+                            HoverImage="{DynamicResource btn_WinRestoreHover}"
+                            Command="{Binding StatusChangeCommand}"
+                            CommandParameter="{x:Static models:WindowChangeEnum.Normal}"/>
+
+                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                            ImageHeight="24" ImageWidth="24" Margin="3 8 0 0"
+                            NormalImage="{DynamicResource btn_WinCloseNormal}"
+                            HoverImage="{DynamicResource btn_WinCloseHover}"
+                            Command="{Binding StatusChangeCommand}"
+                            CommandParameter="{x:Static models:WindowChangeEnum.Close}"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent"
+              />
     </Grid>
 </Window>
