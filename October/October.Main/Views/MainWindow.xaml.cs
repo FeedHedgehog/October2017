@@ -23,7 +23,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace October.Main
+namespace October.Main.Views
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
@@ -34,7 +34,7 @@ namespace October.Main
         IEventAggregator _eventAggregator;
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();        
 
             this.IsHitTestVisible = false;
             IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();

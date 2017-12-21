@@ -1,5 +1,6 @@
 ﻿using Common.WPF.Helpers;
 using Microsoft.Practices.ServiceLocation;
+using October.Main.Views;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;

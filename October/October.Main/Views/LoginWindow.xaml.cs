@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace October.Main
+namespace October.Main.Views
 {
     /// <summary>
     /// LoginWindow.xaml 的交互逻辑
@@ -24,11 +24,11 @@ namespace October.Main
         public LoginWindow()
         {
             InitializeComponent();
-            LoginWindowViewModel login = new LoginWindowViewModel();
-            login.CloseAction = new Action(this.Close);
-            this.DataContext = login;
+            //LoginWindowViewModel login = new LoginWindowViewModel();
+            //login.CloseAction = new Action(this.Close);
+            //this.DataContext = login;
             //设置关闭
-            //(this.DataContext as LoginWindowViewModel).CloseAction = new Action(this.Close);
+            (this.DataContext as LoginWindowViewModel).CloseAction = new Action(this.Close);
         }
     }
 }

@@ -207,6 +207,10 @@
       <Project>{B6CCAC45-B386-4918-B08E-D061E986A6BE}</Project>
       <Name>October.Component.Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\October.DataAcess.DataAcessService\October.DataAcess.DataAcessService.csproj">
+      <Project>{34BEA65C-C5EE-4211-B1C5-C86008A93F11}</Project>
+      <Name>October.DataAcess.DataAcessService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
