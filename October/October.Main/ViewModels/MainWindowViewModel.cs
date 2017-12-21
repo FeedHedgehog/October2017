@@ -18,9 +18,9 @@ using System.Windows;
 
 namespace October.Main.ViewModels
 {
-    public class MainWindowViewModel:BindableBase
+    public class MainWindowViewModel : BindableBase
     {
-        IEventAggregator _eventAggregator;        
+        IEventAggregator _eventAggregator;
         IRegionManager _regionManager;
         IUnityContainer _container;
         IMenu _menuService;
@@ -173,7 +173,7 @@ namespace October.Main.ViewModels
         #endregion
 
         public MainWindowViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, IMenu menuService, IUnityContainer container)
-        {            
+        {
             //this._windowActions = new List<CustomPopupWindowAction>();
             this.menuList = new ObservableCollection<MenuItemEntity>();
             this.userMenuList = new ObservableCollection<MenuItemEntity>();
@@ -209,11 +209,11 @@ namespace October.Main.ViewModels
         private void InitialUserMenuList()
         {
             MenuItemEntity childMenuItemEntity = new MenuItemEntity();
-            childMenuItemEntity.id = Convert.ToInt32( 2);
+            childMenuItemEntity.id = Convert.ToInt32(2);
             childMenuItemEntity.code = "PasswordSettings";
             childMenuItemEntity.name = "修改密码";
             MenuItemEntity child1MenuItemEntity = new MenuItemEntity();
-            child1MenuItemEntity.id = Convert.ToInt32( 1);
+            child1MenuItemEntity.id = Convert.ToInt32(1);
             child1MenuItemEntity.code = "PersonalInfo";
             child1MenuItemEntity.name = "修改资料";
             MenuItemEntity menuItemEntity = new MenuItemEntity();
@@ -228,7 +228,8 @@ namespace October.Main.ViewModels
             Application.Current.Dispatcher.Invoke(() =>
             {
                 //获取菜单
-                _menuService.GetMenu<MenuEntity>((ret) => {
+                _menuService.GetMenu<MenuEntity>((ret) =>
+                {
                     if (ret.state.code != StateCodeEnum.Success)
                         LogHelper.Error(ret.state.msg);
                     (ret as MenuEntity).menus.ForEach(p =>

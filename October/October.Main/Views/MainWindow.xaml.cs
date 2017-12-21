@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.ServiceLocation;
+﻿using Common.WPF.Helpers;
+using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using October.Basic.Common;
 using October.Basic.Models;
@@ -51,7 +52,7 @@ namespace October.Main
         private void LoadedExcute()
         {
             AxRenderWindow axRenderWindow = ServiceLocator.Current.GetInstance<AxRenderWindow>();
-            //FullScreenHelper.RepairWpfWindowFullScreenBehavior(axRenderWindow);
+            FullScreenHelper.RepairWpfWindowFullScreenBehavior(axRenderWindow);
             axRenderWindow.WindowState = WindowState.Minimized;
             Window mainWin = this;
             mainWin.LocationChanged += (s, args) =>
@@ -65,8 +66,8 @@ namespace October.Main
             };
             mainWin.Closed += (s, args) =>
             {
-                //(this.DataContext as MainWindowViewModel).CloseCommand.Execute();
-                //axRenderWindow.Close();
+                (this.DataContext as MainWindowViewModel).CloseCommand.Execute();
+                axRenderWindow.Close();
             };
             axRenderWindow.Show();
             mainWin.Owner = axRenderWindow;
