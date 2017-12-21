@@ -66,8 +66,8 @@ namespace October.Main.Views
             };
             mainWin.Closed += (s, args) =>
             {
-                (this.DataContext as MainWindowViewModel).CloseCommand.Execute();
                 axRenderWindow.Close();
+                (this.DataContext as MainWindowViewModel).CloseCommand.Execute();                
             };
             axRenderWindow.Show();
             mainWin.Owner = axRenderWindow;

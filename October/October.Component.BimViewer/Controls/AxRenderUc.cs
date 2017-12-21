@@ -47,6 +47,12 @@ namespace October.Component.BimViewer.Controls
             axBIM3DViewer1.SetOptionBackgroundColor(255, 255, 234);
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            axBIM3DViewer1.OpenFile(@"D:\2016\package\projects\CodeRepository\EBIMWorks1.0\B3DModel\CATIA_铁路桥.b3d");
+        }
+
         /// <summary>
         /// 标题：获取一个值，用以指示 System.ComponentModel.Component 当前是否处于设计模式。
         /// 描述：DesignMode 在 VS中存在 Bug ，使用下面的方式可以解决这个问题。

@@ -19,7 +19,8 @@
         ResizeMode="CanMinimize"        
         WindowState="Maximized">
     <Window.Resources>
-        <!-- Converters -->
+        <ResourceDictionary>
+            <!-- Converters -->
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <converters:ValueSubtractParaConverter x:Key="valueSubtractParaConverter" />
         <converters:ValueParamCompareToVisibilityConverter x:Key="valueParamCompareToVisibilityConverter" />
@@ -89,25 +90,29 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        </ResourceDictionary>
     </Window.Resources>
     <Grid>
         <!--菜单展开背景-->
         <Grid  Panel.ZIndex="0" Height="{Binding MenuItemActualHeight}" 
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Top"   >
-            <Grid.Background>
+            <!--<Grid.Background>
                 <ImageBrush ImageSource="{DynamicResource bg_topbarmenu}"/>
-            </Grid.Background>
+            </Grid.Background>-->
         </Grid>
 
 
         <!--顶部菜单-->
         <Grid Name="TitleMenuContainer" Panel.ZIndex="1" Height="80" 
                     HorizontalAlignment="Stretch"
-                    VerticalAlignment="Top"
+                    VerticalAlignment="Top" 
                     MouseLeftButtonDown="TitleMenuContainer_MouseLeftButtonDown">
             <Grid.Background>
-                <ImageBrush ImageSource="{DynamicResource bg_topbar}"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.9">
+                    <GradientStop Color="#FF39849C" Offset="0.516"/>
+                    <GradientStop Color="#FF3F9CF9" Offset="1"/>
+                </LinearGradientBrush>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>

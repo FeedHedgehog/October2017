@@ -11,5 +11,5 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\Assets\Generic.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\Assets\Window\TopMenuStyle.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\October.Component.Controls.g.resources
-D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\Controls\ImageToggleButtonStyle.baml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\Assets\ImageResources.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\Assets\ImageToggleButtonStyle.baml

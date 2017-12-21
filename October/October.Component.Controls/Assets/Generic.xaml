@@ -4,7 +4,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/October.Component.Controls;component/Assets/BlackSkin.xaml"/>
         <ResourceDictionary Source="/October.Component.Controls;component/Assets/ImageResources.xaml"/>
-        <ResourceDictionary Source="/October.Component.Controls;component/Controls/ImageToggleButtonStyle.xaml"/>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/ImageToggleButtonStyle.xaml"/>
         <ResourceDictionary Source="/October.Component.Controls;component/Assets/Window/TopMenuStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
