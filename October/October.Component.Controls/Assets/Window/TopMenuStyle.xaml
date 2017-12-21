@@ -83,12 +83,12 @@
             <Trigger Property="IsHighlighted" Value="true">
                 <Setter Property="Opacity" Value="{DynamicResource MouseMoveOpacity}"/>
                 <Setter Property="FontSize" Value="14" />
-                <!--<Setter Property="FontFamily" Value="{DynamicResource SourceHanSansCNBold}"/>-->
+                <Setter Property="FontFamily" Value="宋体"/>
 
             </Trigger>
             <Trigger Property="IsHighlighted" Value="false">
                 <Setter Property="FontSize" Value="14" />
-                <!--<Setter Property="FontFamily" Value="{DynamicResource SourceHanSansCNRegular}" />-->
+                <Setter Property="FontFamily" Value="宋体" />
                 <Setter Property="Opacity" Value="{DynamicResource NormalOpacity}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
@@ -182,11 +182,11 @@
             <Trigger Property="IsHighlighted" Value="true">
                 <Setter Property="Opacity" Value="{DynamicResource MouseMoveOpacity}"/>
                 <Setter Property="FontSize" Value="14" />
-                <!--<Setter Property="FontFamily" Value="{DynamicResource SourceHanSansCNBold}"/>-->
+                <Setter Property="FontFamily" Value="宋体"/>
             </Trigger>
             <Trigger Property="IsHighlighted" Value="false">
                 <Setter Property="FontSize" Value="14" />
-                <!--<Setter Property="FontFamily" Value="{DynamicResource SourceHanSansCNRegular}" />-->
+                <Setter Property="FontFamily" Value="宋体" />
                 <Setter Property="Opacity" Value="{DynamicResource NormalOpacity}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">

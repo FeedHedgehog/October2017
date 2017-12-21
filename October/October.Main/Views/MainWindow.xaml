@@ -198,8 +198,7 @@
 
                     <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
                                       ImageHeight="20" ImageWidth="20" Margin="15 8 0 0"
-                                      ToolTip="视频监控"  Focusable="False"  
-                                     
+                                      ToolTip="视频监控"  Focusable="False"                                       
                                       NormalImage="{DynamicResource btn_airplay1}"
                                       ToggleImage="{DynamicResource btn_airplay1_p}" 
                                       />
