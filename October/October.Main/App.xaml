@@ -5,8 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/October.Component.Controls;Component/Assets/Generic.xaml"/>
-                <ResourceDictionary Source="/October.Component.Controls;Component/Assets/Window/TopMenuStyle.xaml"/>
+                <ResourceDictionary Source="/October.Component.Controls;component/Assets/Generic.xaml"/>
 
                 <!--这些资源放到APP里面才不报错，不知道为什么-->
                 <!--<ResourceDictionary Source="/October.Component.Controls;component/Assets/Controls/TreeViewStyle.xaml"/>

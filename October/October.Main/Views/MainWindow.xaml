@@ -154,8 +154,7 @@
                     <ComboBox x:Name="backlog" Style="{StaticResource TSpeedButtonStyle}" Margin="0 8 0 0"
                               IsDropDownOpen="{Binding BacklogIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_daiban_act}"
-                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_daiban}"
-                              acControls:ControlAttachProperty.HasInfos="{Binding  ElementName=backlogContent,Path=DataContext.HasInfos,UpdateSourceTrigger=PropertyChanged}"
+                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_daiban}"                              
                               ToolTip="待办事项">
                         <!--<acControls:ControlAttachProperty.CustomContent>
                             <acControls:Backlog x:Name="backlogContent" Height="{Binding ElementName=Content,Path=ActualHeight}" />
@@ -165,7 +164,7 @@
                               IsDropDownOpen="{Binding AlertListIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_gonggao_act}"
                               acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_gonggao}"
-                              acControls:ControlAttachProperty.HasInfos="{Binding ElementName=alertContent,Path=DataContext.HasInfos,UpdateSourceTrigger=PropertyChanged}"
+                              
                               
                               ToolTip="报警列表">
                         <!--<acControls:ControlAttachProperty.CustomContent>
@@ -175,8 +174,7 @@
                     <ComboBox x:Name="systemNotice" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
                               IsDropDownOpen="{Binding SystemNoticeIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_xinfeng_act}"
-                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_xinfeng}"
-                              acControls:ControlAttachProperty.HasInfos="{Binding ElementName=systemNoticeContent,Path=DataContext.HasInfos,UpdateSourceTrigger=PropertyChanged}"
+                              acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_xinfeng}"                              
                               ToolTip="系统公告">
                         <!--<acControls:ControlAttachProperty.CustomContent>
                             <acControls:SystemNotice x:Name="systemNoticeContent"  Height="{Binding ElementName=Content,Path=ActualHeight}" />
