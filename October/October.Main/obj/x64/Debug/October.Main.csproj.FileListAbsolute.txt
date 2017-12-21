@@ -50,3 +50,6 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\Oct
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Models.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Common.pdb
 D:\2016\package\projects\EBIM\wpf\October\October\October.Main\bin\x64\Debug\October.Basic.Models.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\bin\x64\Debug\October.Main.exe.config
+D:\2016\package\projects\EBIM\wpf\October\October\bin\x64\Debug\October.Main.exe
+D:\2016\package\projects\EBIM\wpf\October\October\bin\x64\Debug\October.Main.pdb

@@ -36,7 +36,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
+    <OutputPath>..\bin\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -190,6 +190,10 @@
     <ProjectReference Include="..\October.Basic.Common\October.Basic.Common.csproj">
       <Project>{A0A88BCD-9A2A-458C-88C0-4ECD9C64BF05}</Project>
       <Name>October.Basic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\October.Basic.Contracts\October.Basic.Contracts.csproj">
+      <Project>{C425578D-C626-4AA0-9F4E-3AE99AE734D0}</Project>
+      <Name>October.Basic.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\October.Basic.Models\October.Basic.Models.csproj">
       <Project>{7595f402-04d4-420d-b7f0-280018dc883d}</Project>

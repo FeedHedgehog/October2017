@@ -9,20 +9,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 
 namespace October.Component.Controls
-{
-    public enum ImagePlacement
-    {
-        Left,
-        Top
-    }
-
-
-
+{ 
     public class ImageToggleButton : ToggleButton
     {
         static ImageToggleButton()
         {
-
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ImageToggleButton), new FrameworkPropertyMetadata(typeof(ImageToggleButton)));
         }
 
@@ -286,5 +277,11 @@ namespace October.Component.Controls
 
 
         }
+    }
+
+    public enum ImagePlacement
+    {
+        Left,
+        Top
     }
 }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7595F402-04D4-420D-B7F0-280018DC883D}</ProjectGuid>
+    <ProjectGuid>{34BEA65C-C5EE-4211-B1C5-C86008A93F11}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>October.Basic.Models</RootNamespace>
-    <AssemblyName>October.Basic.Models</AssemblyName>
+    <RootNamespace>October.DataAcess.DataAcessService</RootNamespace>
+    <AssemblyName>October.DataAcess.DataAcessService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,14 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Prism">
-      <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
-    </Reference>
-    <Reference Include="Prism.Unity.Wpf">
-      <HintPath>..\packages\Prism.Unity.6.3.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="Prism.Wpf">
-      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\October.Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,10 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\StateEntity.cs" />
-    <Compile Include="Enums\WindowChangeEnum.cs" />
-    <Compile Include="MainWindow\MenuItemEntity.cs" />
+    <Compile Include="MainWindow\MenuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\October.Basic.Contracts\October.Basic.Contracts.csproj">
+      <Project>{C425578D-C626-4AA0-9F4E-3AE99AE734D0}</Project>
+      <Name>October.Basic.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
