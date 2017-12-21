@@ -198,7 +198,7 @@
                                       NormalImage="{StaticResource btn_airplay1}"
                                       HoverImage="{StaticResource btn_airplay1_p}"  />-->
 
-                    <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                    <acControls:ImageToggleButton Style="{StaticResource ImageToggleButtonStyle}"
                                       ImageHeight="20" ImageWidth="20" Margin="15 8 0 0"
                                       ToolTip="视频监控"  Focusable="False"  
                                      
@@ -207,14 +207,14 @@
                                       />
                 </StackPanel>
 
-                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                <acControls:ImageToggleButton Style="{StaticResource ImageToggleButtonStyle}"
                             ImageHeight="24" ImageWidth="24" Margin="15 8 0 0"
                             NormalImage="{DynamicResource btn_WinMinNormal}"
                             HoverImage="{DynamicResource btn_WinMinHover}"
                             Command="{Binding StatusChangeCommand}"
                             CommandParameter="{x:Static models:WindowChangeEnum.Min}"/>
 
-                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                <acControls:ImageToggleButton Style="{StaticResource ImageToggleButtonStyle}"
                             Visibility="{Binding ElementName=mainWindow,Path=WindowState,Converter={StaticResource valueParamCompareToVisibilityConverter},ConverterParameter='Maximized'}"                 
                             ImageHeight="24" ImageWidth="24" Margin="3 8 0 0"
                             NormalImage="{DynamicResource btn_WinMaxNormal}"
@@ -222,7 +222,7 @@
                             Command="{Binding StatusChangeCommand}"
                             CommandParameter="{x:Static models:WindowChangeEnum.Max}"/>
 
-                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                <acControls:ImageToggleButton Style="{StaticResource ImageToggleButtonStyle}"
                              Visibility="{Binding ElementName=mainWindow,Path=WindowState,Converter={StaticResource valueParamCompareToVisibilityConverter},ConverterParameter='Normal'}"                     
                             ImageHeight="24" ImageWidth="24" Margin="3 8 0 0"
                             NormalImage="{DynamicResource btn_WinRestoreNormal}"
@@ -230,7 +230,7 @@
                             Command="{Binding StatusChangeCommand}"
                             CommandParameter="{x:Static models:WindowChangeEnum.Normal}"/>
 
-                <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
+                <acControls:ImageToggleButton Style="{StaticResource ImageToggleButtonStyle}"
                             ImageHeight="24" ImageWidth="24" Margin="3 8 0 0"
                             NormalImage="{DynamicResource btn_WinCloseNormal}"
                             HoverImage="{DynamicResource btn_WinCloseHover}"
