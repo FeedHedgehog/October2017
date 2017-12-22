@@ -9,4 +9,4 @@ A sample project of construction management platform based on WPF
 * Demo
 * Develop Environment
 * License MIT
-thunks is licensed under the MIT license.Copyright © 2014-2018 thunks.
+>thunks is licensed under the MIT license.Copyright © 2014-2018 thunks.
