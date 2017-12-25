@@ -53,7 +53,7 @@ namespace October.Main
         /// <param name="e"></param>
         public void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
-            //LogHelper.Error(e.Exception);
+            LogHelper.Error(e.Exception);
             e.Handled = true;
         }
 
@@ -66,7 +66,7 @@ namespace October.Main
         {
             if (e.ExceptionObject is System.Exception)
             {
-                //LogHelper.Error((System.Exception)e.ExceptionObject);
+                LogHelper.Error((System.Exception)e.ExceptionObject);
             }
         }
     }
