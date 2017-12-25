@@ -13,3 +13,4 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\October.Component.Controls.g.resources
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\October.Component.Controls.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\October.Component.Controls.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\x64\Debug\October.Component.Controls.csprojResolveAssemblyReference.cache

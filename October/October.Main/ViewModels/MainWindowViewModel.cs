@@ -329,7 +329,7 @@ namespace October.Main.ViewModels
 
         private void CloseWindow()
         {
-            System.GC.Collect();
+            //System.GC.Collect();
             //foreach (CustomPopupWindowAction windowAction in this._windowActions)
             //    windowAction.CloseWindow();            
         }

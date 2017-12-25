@@ -34,7 +34,7 @@ namespace October.Main.Views
         IEventAggregator _eventAggregator;
         public MainWindow()
         {
-            InitializeComponent();        
+            InitializeComponent();
 
             this.IsHitTestVisible = false;
             IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();
@@ -43,7 +43,7 @@ namespace October.Main.Views
             RegionManager.SetRegionManager(this, container.Resolve<IRegionManager>());
             _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             _eventAggregator.GetEvent<MainWinChangeEvent>().Subscribe(StatusChange);
-        }      
+        }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -64,10 +64,13 @@ namespace October.Main.Views
             {
                 axRenderWindow.WindowState = mainWin.WindowState;
             };
-            mainWin.Closed += (s, args) =>
+            mainWin.Closing += (s, args) =>
             {
                 axRenderWindow.Close();
-                (this.DataContext as MainWindowViewModel).CloseCommand.Execute();                
+            };
+            mainWin.Closed += (s, args) =>
+            {                
+                (this.DataContext as MainWindowViewModel).CloseCommand.Execute();
             };
             axRenderWindow.Show();
             mainWin.Owner = axRenderWindow;
@@ -107,7 +110,7 @@ namespace October.Main.Views
         {
             base.OnDeactivated(e);
             tbTitle.Focus();
-        }  
+        }
 
         private void StatusChange(WindowChangeEnum windowChangeEnum)
         {
