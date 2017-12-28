@@ -20,23 +20,12 @@ namespace October.Main
             bootstrapper.Run();
 
             //GlobalConfig.ServerURL = ConfigurationManager.AppSettings["ServerURL"];
-            //GlobalConfig.RequestTimeOut = int.Parse(ConfigurationManager.AppSettings["RequestTimeOut"]);
-            //GlobalConfig.ActiveMQProviderURL = ConfigurationManager.AppSettings["ActiveMQProviderURL"];
-            //GlobalConfig.MQProviderUserName = ConfigurationManager.AppSettings["MQProviderUserName"];
-            //GlobalConfig.MQProviderUserPwd = ConfigurationManager.AppSettings["MQProviderUserPwd"];
-            //GlobalConfig.CityMakerServerUserPwd = ConfigurationManager.AppSettings["CityMakerServerUserPwd"];
-            //GlobalConfig.VideoServerIP = ConfigurationManager.AppSettings["VideoServerIP"];
+            //GlobalConfig.RequestTimeOut = int.Parse(ConfigurationManager.AppSettings["RequestTimeOut"]);            
             //uint temp = 0;
             //if (uint.TryParse(ConfigurationManager.AppSettings["VideoServerPort"], out temp))
             //{
             //    GlobalConfig.VideoServerPort = temp;
-            //}
-            //GlobalConfig.VideoServerUserName = ConfigurationManager.AppSettings["VideoServerUserName"];
-            //GlobalConfig.VideoServerUserPwd = ConfigurationManager.AppSettings["VideoServerUserPwd"];
-            //GlobalConfig.FtpServerUrl = ConfigurationManager.AppSettings["FtpServerUrl"];
-            //GlobalConfig.FtpUserName = ConfigurationManager.AppSettings["FtpUserName"];
-            //GlobalConfig.FtpUserPwd = ConfigurationManager.AppSettings["FtpUserPwd"];
-            //GlobalConfig.FtpServerCategory = ConfigurationManager.AppSettings["FtpServerCategory"];
+            //}        
 
             //bool isServerUrl = false;
             //bool.TryParse(ConfigurationManager.AppSettings["isServerUrl"], out isServerUrl);
