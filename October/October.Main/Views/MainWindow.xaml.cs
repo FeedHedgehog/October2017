@@ -35,8 +35,7 @@ namespace October.Main.Views
         public MainWindow()
         {
             InitializeComponent();
-
-            this.IsHitTestVisible = false;
+            
             IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();
             this.Loaded += MainWindow_Loaded;
             this.Closed += MainWindow_Closed;
@@ -132,6 +131,11 @@ namespace October.Main.Views
                     }
                     break;
             }
+        }
+
+        private void ImageToggleButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

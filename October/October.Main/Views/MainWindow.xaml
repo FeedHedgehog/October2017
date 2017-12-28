@@ -205,7 +205,7 @@
                 </StackPanel>
 
                 <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
-                            ImageHeight="24" ImageWidth="24" Margin="15 8 0 0"
+                            ImageHeight="24" ImageWidth="24" Margin="15 8 0 0" MouseLeftButtonDown="ImageToggleButton_MouseLeftButtonDown"
                             NormalImage="{DynamicResource btn_WinMinNormal}"
                             HoverImage="{DynamicResource btn_WinMinHover}"
                             Command="{Binding StatusChangeCommand}"

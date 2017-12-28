@@ -56,6 +56,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -184,7 +185,6 @@
     <Resource Include="Images\LoginWindow\btn_enter_dis.png" />
     <Resource Include="Images\LoginWindow\cb_checked.png" />
     <Resource Include="Images\LoginWindow\cb_uncheck.png" />
-    <Resource Include="Images\LoginWindow\logo_login.png" />
     <Resource Include="Images\MainWindow\bg_ALERT1.png" />
     <Resource Include="Images\MainWindow\bg_ALERT2.png" />
     <Resource Include="Images\MainWindow\bg_ALERT3.png" />
