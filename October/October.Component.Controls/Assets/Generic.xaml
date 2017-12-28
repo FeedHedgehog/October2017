@@ -6,5 +6,6 @@
         <ResourceDictionary Source="/October.Component.Controls;component/Assets/ImageResources.xaml"/>
         <ResourceDictionary Source="/October.Component.Controls;component/Assets/ImageToggleButtonStyle.xaml"/>
         <ResourceDictionary Source="/October.Component.Controls;component/Assets/Window/TopMenuStyle.xaml"/>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/Window/PopWindowStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

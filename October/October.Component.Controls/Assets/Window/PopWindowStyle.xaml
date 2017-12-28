@@ -1,0 +1,170 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:local="clr-namespace:October.Component.Controls"
+                    xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:prism="http://prismlibrary.com/"
+                    xmlns:commonWPF="clr-namespace:Common.WPF;assembly=Common.WPF">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/BlackSkin.xaml"/>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/PopControlsStyle.xaml"/>
+        <ResourceDictionary Source="/October.Component.Controls;component/Assets/ImageResources.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <ImageBrush x:Key="realtimeMonitorBackground" ImageSource="{StaticResource rm_bg_daping}"></ImageBrush>
+    <local:BooleanToVisibilityConverter x:Key="boolToVisble"/>
+
+    
+    <Style x:Key="PopWindowStyle" TargetType="{x:Type local:PopWindow}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <!--<Setter Property="FontFamily" Value="{DynamicResource SourceHanSansCNRegular}"/>
+        <Setter Property="FontSize" Value="{DynamicResource SourceHansans_H3_Size}"/>-->
+        <Setter Property="Foreground" Value="{DynamicResource PopWindowForeground}"/>
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
+        <Setter Property="Width" Value="1600"></Setter>
+        <Setter Property="Height" Value="900"></Setter>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+        <Setter Property="Height" Value="{Binding PopWindowInfo.WindowHegiht,Mode=TwoWay}"/>
+        <Setter Property="Width" Value="{Binding PopWindowInfo.WindowWidth,Mode=TwoWay}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:PopWindow}">
+                    <Border x:Name="WindowBorder" BorderBrush="#8E9BBC" BorderThickness="1" >
+                        <Border.Background>
+                            <SolidColorBrush x:Name="WindowBorderBackground" Color="#EFF2F4" />
+                        </Border.Background>
+                        <Border.Resources>
+                            <Storyboard x:Key="BackgroundAnimation">
+                                <ColorAnimation Storyboard.TargetName="WindowBorderBackground" 
+                                                Storyboard.TargetProperty="Color" 
+                                                To="{DynamicResource WindowBackgroundColor}" Duration="0:0:.6" />
+                            </Storyboard>
+                        </Border.Resources>
+                        <Grid >
+                            <Border BorderBrush="{DynamicResource WindowBorder}" BorderThickness="0" CornerRadius="0" >
+                                <AdornerDecorator>
+                                    <Grid x:Name="LayoutRoot">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="100"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid  x:Name="Title" Background="{StaticResource  TitleBackground}" HorizontalAlignment="Stretch">
+                                            
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="45" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid>
+                                                <!-- window system buttons-->
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,20,0" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                                                    <Button x:Name="Minimize" VerticalAlignment="Top" Width="20" Height="20" Command="{Binding Source={x:Static shell:SystemCommands.MinimizeWindowCommand}}" ToolTip="最小化" Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource Btn_PopMin}"
+                                                            local:ControlAttachProperty.ImgHeight="16" local:ControlAttachProperty.ImgWidth="16"/>
+                                                    <Grid Margin="10,0,10,0">
+                                                        <Button x:Name="Restore" IsTabStop="False" KeyboardNavigation.IsTabStop="False" Width="20" Height="20" Command="{Binding Source={x:Static shell:SystemCommands.RestoreWindowCommand}}" ToolTip="还原" Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource btn_WinMaxNormal}" Visibility="Collapsed" 
+                                                                local:ControlAttachProperty.ImgHeight="16" local:ControlAttachProperty.ImgWidth="16"/>
+                                                        <Button x:Name="Maximize" IsTabStop="False" KeyboardNavigation.IsTabStop="False" Width="20" Height="20" Command="{Binding Source={x:Static shell:SystemCommands.MaximizeWindowCommand}}" ToolTip="最大化" Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource Btn_PopMax}"
+                                                                local:ControlAttachProperty.ImgHeight="16" local:ControlAttachProperty.ImgWidth="16"/>
+                                                    </Grid>
+                                                    <Button Width="20" Height="20" IsTabStop="False" KeyboardNavigation.IsTabStop="False" Command="{Binding Source={x:Static shell:SystemCommands.CloseWindowCommand}}" ToolTip="关闭" Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource Btn_PopClose}" 
+                                                            local:ControlAttachProperty.ImgHeight="16" local:ControlAttachProperty.ImgWidth="16"/>
+                                                </StackPanel>
+                                                <Grid  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,20,0,0" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                                                    <TextBlock Name="txtTitle" Text="{TemplateBinding Title}" Visibility="Visible" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" />
+                                                </Grid>
+                                            </Grid>
+                                            <Grid  x:Name="windowTool" Grid.Row="1">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid   Visibility="{Binding DataContext.PopWindowInfo.IsShowNavTool,Converter={StaticResource boolToVisble},RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type local:PopWindow}}}">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Button x:Name="UpBtn" Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource Btn_NavUp}" Width="32" Height="32" Margin="14 0 0 0" 
+                                                            IsEnabled="{Binding DataContext.PopWindowInfo.IsUp,RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type local:PopWindow}}}" Command="{Binding UpCommand}"
+                                                            local:ControlAttachProperty.ImgHeight="20" local:ControlAttachProperty.ImgWidth="20"/>
+                                                    <Button Grid.Column="1" x:Name="NextBtn"  Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource Btn_NavNext}" Width="32" Height="32"   Margin="5 0 0 0"
+                                                            IsEnabled="{Binding DataContext.PopWindowInfo.IsNext,RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=1,AncestorType={x:Type local:PopWindow}}}" Command="{Binding NextCommand}"  
+                                                            local:ControlAttachProperty.ImgHeight="20" local:ControlAttachProperty.ImgWidth="20"/>
+                                                    <Button Grid.Column="2" x:Name="HomeBtn" Style="{StaticResource BackgroundImgBtnStyle}" local:ControlAttachProperty.ImgBtnNormalSource="{StaticResource Btn_NavHome}" Width="32" Height="32" Margin="18 0 8 0" 
+                                                            Command="{Binding HomeCommand}" 
+                                                            local:ControlAttachProperty.ImgHeight="20" local:ControlAttachProperty.ImgWidth="20"/>
+                                                </Grid>
+                                                <ContentControl FocusVisualStyle="{x:Null}"  Grid.Column="1" Content="{Binding Path=CustomControl,Mode=OneWay}"/>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                        <Border x:Name="contentBackground" Grid.Row="1" BorderThickness="0" Background="{StaticResource ContentBackground}" >
+                                            <Grid>
+                                                <materialDesign:DialogHost x:Name="msgDialog" Identifier="{Binding PopWindowInfo.RegionName}"  Grid.ZIndex="1000"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                <Grid Background="#eeeeee" Opacity="0.7" Grid.ZIndex="300" Visibility="{Binding Path=IsOpen,Mode=OneWay,ElementName=msgDialog,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource boolToVisble}}"/>
+                                                <ContentPresenter Grid.ZIndex="0" x:Name="PopWindowContent"  SnapsToDevicePixels="True" Margin="0"/>
+                                                <!--<commonWPF:LoadingIndicator  
+                                                    Width="{Binding ElementName=contentBackground,Path=ActualWidth}"
+                                                    Height="{Binding ElementName=contentBackground,Path=ActualHeight}"
+                                                    Visibility="{Binding Path=PopWindowInfo.IsLoading,Converter={StaticResource boolToVisble}}" 
+                                                    LoadPercent="{Binding Path=PopWindowInfo.LoadPercent}"/>-->
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </AdornerDecorator>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsOpen" Value="true" SourceName="msgDialog">
+                            <Setter Property="Background" Value="#618199" TargetName="Title"/>
+                            <Setter Property="IsEnabled" Value="False" TargetName="Title" />
+                        </Trigger>
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter TargetName="Maximize" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="Restore" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="LayoutRoot" Property="Margin" Value="7" />
+                        </Trigger>
+                        <Trigger Property="WindowState" Value="Normal">
+                            <Setter TargetName="Maximize" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="Restore" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ResizeMode" Value="CanMinimize">
+                            <Setter TargetName="Maximize" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="Restore" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="ResizeMode" Value="NoResize">
+                            <Setter TargetName="Minimize" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="Maximize" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="Restore" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="ResizeMode" Value="CanResizeWithGrip" />
+                                <Condition Property="WindowState" Value="Normal" />
+                            </MultiTrigger.Conditions>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="shell:WindowChrome.WindowChrome">
+            <Setter.Value>
+                <shell:WindowChrome  CornerRadius="0"  UseAeroCaptionButtons="False" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--the dataContext of this window must be CustomPopupViewNotifycation-->
+    <Style x:Key="popWindowWithCustomStyle" TargetType="{x:Type Window}">
+        <Setter Property="Height" Value="{Binding WindowHeight}"></Setter>
+        <Setter Property="Width" Value="{Binding WindowWidth}"></Setter>
+        <Setter Property="AllowsTransparency" Value="True"></Setter>
+        <Setter Property="Left" Value="0"></Setter>
+        <Setter Property="Top" Value="0"></Setter>
+        <Setter Property="WindowState" Value="{Binding PopWindowState}"></Setter>
+        <Setter Property="Background" Value="{Binding PopBackgroundBrush}"></Setter>
+        <Setter Property="WindowStyle" Value="None"></Setter>
+    </Style>
+</ResourceDictionary>
