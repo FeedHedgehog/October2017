@@ -305,12 +305,13 @@ namespace October.Main.ViewModels
             //    args = new Dictionary<string, object>();
             //args.Add(ParameterNames.PopWindowInfo, popWindowInfo);
 
-            this.CustomPopupViewRequestDict[menuItem.code].Raise(
-              new Notification { Content = args, Title = menuItem.name }, (r) =>
-              {
+            //this.CustomPopupViewRequestDict[menuItem.code].Raise(
+            //  new Notification { Content = args, Title = menuItem.name }, (r) =>
+            //  {
 
-              });
+            //  });
             //_eventAggregator.GetEvent<PopWindowActivateEvents>().Publish(menuItem.code + "Region");
+            MessageBox.Show(menuItem.name);
         }
         #endregion
 

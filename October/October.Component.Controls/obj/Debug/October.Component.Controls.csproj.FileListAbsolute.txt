@@ -4,3 +4,12 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Windows.Shell.pdb
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\ImageResources.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls_MarkupCompile.cache
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls_MarkupCompile.lref
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\BlackSkin.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\Generic.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\Window\TopMenuStyle.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\ImageToggleButtonStyle.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\October.Component.Controls.g.resources
