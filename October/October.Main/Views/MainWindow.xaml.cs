@@ -35,13 +35,14 @@ namespace October.Main.Views
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.IsHitTestVisible = false;
             IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();
             this.Loaded += MainWindow_Loaded;
             this.Closed += MainWindow_Closed;
             RegionManager.SetRegionManager(this, container.Resolve<IRegionManager>());
             _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             _eventAggregator.GetEvent<MainWinChangeEvent>().Subscribe(StatusChange);
+            _eventAggregator.GetEvent<ActiveMainWindowEvent>().Subscribe(ActiveMainWindow);
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -75,7 +76,7 @@ namespace October.Main.Views
             mainWin.Owner = axRenderWindow;
             this.Background = Brushes.Transparent;
             axRenderWindow.WindowState = WindowState.Maximized;
-            //mainWin.Activate();
+            mainWin.Activate();
         }
 
         public void ActiveMainWindow(bool? disable)
@@ -87,12 +88,12 @@ namespace October.Main.Views
             else if (disable.GetValueOrDefault())
             {
                 this.Activate();
-                //this.IsHitTestVisible = false;
+                this.IsHitTestVisible = false;
             }
-            //else
-            //{
-            //    this.IsHitTestVisible = true;
-            //}
+            else
+            {
+                this.IsHitTestVisible = true;
+            }
         }
 
         private void MainWindow_Closed(object sender, EventArgs e)

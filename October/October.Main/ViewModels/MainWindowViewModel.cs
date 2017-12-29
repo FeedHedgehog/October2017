@@ -314,7 +314,6 @@ namespace October.Main.ViewModels
 
               });
             _eventAggregator.GetEvent<PopWindowActivateEvents>().Publish(menuItem.code + "Region");
-            //MessageBox.Show(menuItem.name);
         }
         #endregion
 
