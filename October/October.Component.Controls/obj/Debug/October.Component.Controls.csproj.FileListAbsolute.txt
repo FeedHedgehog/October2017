@@ -56,3 +56,6 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Controls\PopMessageDialog.g.cs
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\MessageDialogStyle.baml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Controls\PopMessageDialog.baml
