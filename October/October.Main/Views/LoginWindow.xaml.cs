@@ -23,10 +23,7 @@ namespace October.Main.Views
     {
         public LoginWindow()
         {
-            InitializeComponent();
-            //LoginWindowViewModel login = new LoginWindowViewModel();
-            //login.CloseAction = new Action(this.Close);
-            //this.DataContext = login;
+            InitializeComponent();           
             //设置关闭
             (this.DataContext as LoginWindowViewModel).CloseAction = new Action(this.Close);
         }
