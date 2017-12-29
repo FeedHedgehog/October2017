@@ -3,6 +3,7 @@ using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using October.Basic.Common;
 using October.Basic.Models;
+using October.Component.Controls;
 using October.Main.ViewModels;
 using October.Main.Views;
 using Prism.Events;
@@ -35,7 +36,7 @@ namespace October.Main.Views
         public MainWindow()
         {
             InitializeComponent();
-            this.IsHitTestVisible = false;
+            //this.IsHitTestVisible = false;
             IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();
             this.Loaded += MainWindow_Loaded;
             this.Closed += MainWindow_Closed;
@@ -76,7 +77,7 @@ namespace October.Main.Views
             mainWin.Owner = axRenderWindow;
             this.Background = Brushes.Transparent;
             axRenderWindow.WindowState = WindowState.Maximized;
-            mainWin.Activate();
+            //mainWin.Activate();
         }
 
         public void ActiveMainWindow(bool? disable)
@@ -88,12 +89,12 @@ namespace October.Main.Views
             else if (disable.GetValueOrDefault())
             {
                 this.Activate();
-                this.IsHitTestVisible = false;
+                //this.IsHitTestVisible = false;
             }
-            else
-            {
-                this.IsHitTestVisible = true;
-            }
+            //else
+            //{
+            //    this.IsHitTestVisible = true;
+            //}
         }
 
         private void MainWindow_Closed(object sender, EventArgs e)
@@ -128,6 +129,9 @@ namespace October.Main.Views
                 case WindowChangeEnum.Close:
                     {
                         //ServiceLocator.Current.GetInstance<EventAggregator>().GetEvent<ShowWaitIndicatorEvent>().Publish(true);
+                        MessageBoxResult objMessageBoxResult = MessageDialog.ShowMsg("您确定要关闭系统吗？", "系统提示：", MessageBoxButton.YesNo);
+                        if (objMessageBoxResult != MessageBoxResult.Yes)
+                            return;
                         this.Close();
                     }
                     break;

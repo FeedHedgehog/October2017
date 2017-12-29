@@ -331,10 +331,7 @@ namespace October.Main.ViewModels
         }
 
         private void CloseWindow()
-        {
-            MessageBoxResult objMessageBoxResult = MessageDialog.ShowMsg("您确定要关闭系统吗？", "系统提示：", MessageBoxButton.YesNo);
-            if (objMessageBoxResult != MessageBoxResult.Yes)
-                return;
+        {            
             System.GC.Collect();
             foreach (CustomPopupWindowAction windowAction in this._windowActions)
                 windowAction.CloseWindow();
