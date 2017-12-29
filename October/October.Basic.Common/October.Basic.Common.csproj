@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\MainWinChangeEvent.cs" />
+    <Compile Include="Events\PopWindowActivateEvents.cs" />
+    <Compile Include="Global\ParameterNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

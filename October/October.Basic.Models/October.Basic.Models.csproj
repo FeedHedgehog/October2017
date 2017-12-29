@@ -49,7 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\PopWindowInfoEntity.cs" />
     <Compile Include="Common\StateEntity.cs" />
+    <Compile Include="Enums\PopupPageStatusEnum.cs" />
     <Compile Include="Enums\WindowChangeEnum.cs" />
     <Compile Include="MainWindow\MenuItemEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

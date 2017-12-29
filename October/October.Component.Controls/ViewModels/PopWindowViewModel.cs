@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Unity;
 
-namespace October.Component.Controls.ViewModels
+namespace October.Component.Controls
 {
     /// <summary>
     ///Name:PopWindowViewModel
