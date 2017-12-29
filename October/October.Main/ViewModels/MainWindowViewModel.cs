@@ -2,6 +2,7 @@
 using October.Basic.Common;
 using October.Basic.Contracts;
 using October.Basic.Models;
+using October.Component.Controls;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
@@ -15,11 +16,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace October.Main.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        private List<CustomPopupWindowAction> _windowActions = null;
         IEventAggregator _eventAggregator;
         IRegionManager _regionManager;
         IUnityContainer _container;
@@ -174,7 +177,7 @@ namespace October.Main.ViewModels
 
         public MainWindowViewModel(IRegionManager regionManager, IEventAggregator eventAggregator, IMenu menuService, IUnityContainer container)
         {
-            //this._windowActions = new List<CustomPopupWindowAction>();
+            this._windowActions = new List<CustomPopupWindowAction>();
             this.menuList = new ObservableCollection<MenuItemEntity>();
             this.userMenuList = new ObservableCollection<MenuItemEntity>();
             this._eventAggregator = eventAggregator;
@@ -198,7 +201,7 @@ namespace October.Main.ViewModels
             //注册事件聚合器事件
             //this._eventAggregator.GetEvent<MQAlarmPushEvent>().Subscribe(AddAlarm);
             //this._eventAggregator.GetEvent<RemoveAlarmEvent>().Subscribe(RemoveAlarm);
-            //this._eventAggregator.GetEvent<CustomPopWindowShowEvents>().Subscribe(CustomPopWindowShow);
+            this._eventAggregator.GetEvent<CustomPopWindowShowEvents>().Subscribe(CustomPopWindowShow);
             //_eventAggregator.GetEvent<UpdateCurrentUserEvent>().Subscribe(UpdateCurrentUserMethod);        
 
             Task.Factory.StartNew(InitialUserMenuList);
@@ -284,34 +287,34 @@ namespace October.Main.ViewModels
             //设置弹出Action 
             if (!this.CustomPopupViewRequestDict.ContainsKey(menuItem.code))
             {
-                //InteractionRequestTrigger interactionRequestTrigger = new InteractionRequestTrigger();
-                //CustomPopupWindowAction customPopupWindowAction = new CustomPopupWindowAction() { CenterOverAssociatedObject = true, IsModal = false };
-                //ContentControl contentControl = new ContentControl();
-                //RegionManager.SetRegionName(contentControl, menuItem.code + "Region");
-                //customPopupWindowAction.WindowContent = contentControl;
+                InteractionRequestTrigger interactionRequestTrigger = new InteractionRequestTrigger();
+                CustomPopupWindowAction customPopupWindowAction = new CustomPopupWindowAction() { CenterOverAssociatedObject = true, IsModal = false };
+                ContentControl contentControl = new ContentControl();
+                RegionManager.SetRegionName(contentControl, menuItem.code + "Region");
+                customPopupWindowAction.WindowContent = contentControl;
 
-                //interactionRequestTrigger.Actions.Add(customPopupWindowAction);
-                //InteractionRequest<INotification> request = new InteractionRequest<INotification>();
-                //this.CustomPopupViewRequestDict.Add(menuItem.code, request);
+                interactionRequestTrigger.Actions.Add(customPopupWindowAction);
+                InteractionRequest<INotification> request = new InteractionRequest<INotification>();
+                this.CustomPopupViewRequestDict.Add(menuItem.code, request);
 
-                //interactionRequestTrigger.SourceObject = this.CustomPopupViewRequestDict[menuItem.code];
-                //System.Windows.Interactivity.Interaction.GetTriggers(Application.Current.MainWindow).Add(interactionRequestTrigger);//这里必须把MainWindow设置未Application.cureent
-                //this._windowActions.Add(customPopupWindowAction);
+                interactionRequestTrigger.SourceObject = this.CustomPopupViewRequestDict[menuItem.code];
+                System.Windows.Interactivity.Interaction.GetTriggers(Application.Current.MainWindow).Add(interactionRequestTrigger);//这里必须把MainWindow设置未Application.cureent
+                this._windowActions.Add(customPopupWindowAction);
             }
-            //PopWindowInfoEntity popWindowInfo = _container.Resolve<PopWindowInfoEntity>(menuItem.code);
-            //popWindowInfo.RegionName = menuItem.code + "Region";
-            //popWindowInfo.HomePath = menuItem.code;
-            //if (args == null)
-            //    args = new Dictionary<string, object>();
-            //args.Add(ParameterNames.PopWindowInfo, popWindowInfo);
+            PopWindowInfoEntity popWindowInfo = _container.Resolve<PopWindowInfoEntity>(menuItem.code);
+            popWindowInfo.RegionName = menuItem.code + "Region";
+            popWindowInfo.HomePath = menuItem.code;
+            if (args == null)
+                args = new Dictionary<string, object>();
+            args.Add(ParameterNames.PopWindowInfo, popWindowInfo);
 
-            //this.CustomPopupViewRequestDict[menuItem.code].Raise(
-            //  new Notification { Content = args, Title = menuItem.name }, (r) =>
-            //  {
+            this.CustomPopupViewRequestDict[menuItem.code].Raise(
+              new Notification { Content = args, Title = menuItem.name }, (r) =>
+              {
 
-            //  });
-            //_eventAggregator.GetEvent<PopWindowActivateEvents>().Publish(menuItem.code + "Region");
-            MessageBox.Show(menuItem.name);
+              });
+            _eventAggregator.GetEvent<PopWindowActivateEvents>().Publish(menuItem.code + "Region");
+            //MessageBox.Show(menuItem.name);
         }
         #endregion
 
@@ -330,9 +333,9 @@ namespace October.Main.ViewModels
 
         private void CloseWindow()
         {
-            //System.GC.Collect();
-            //foreach (CustomPopupWindowAction windowAction in this._windowActions)
-            //    windowAction.CloseWindow();            
+            System.GC.Collect();
+            foreach (CustomPopupWindowAction windowAction in this._windowActions)
+                windowAction.CloseWindow();
         }
     }
 }

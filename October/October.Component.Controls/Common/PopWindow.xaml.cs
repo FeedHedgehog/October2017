@@ -1,4 +1,5 @@
 ﻿using CommonServiceLocator;
+using Microsoft.Practices.ServiceLocation;
 using October.Component.Controls;
 using Prism.Regions;
 using System;

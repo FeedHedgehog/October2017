@@ -3,6 +3,8 @@ using October.Basic.Contracts;
 using October.DataAcess.DataAcessService;
 using October.Main;
 using October.Main.Views;
+using October.Modules.SystemManager;
+using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Unity;
 using System;
@@ -31,7 +33,8 @@ namespace October.Main
 
         protected override void ConfigureModuleCatalog()
         {
-            
+            var catalog = (ModuleCatalog)ModuleCatalog;
+            catalog.AddModule(typeof(SystemManagerModule));
         }
 
         protected override void ConfigureContainer()

@@ -211,6 +211,10 @@
       <Project>{34BEA65C-C5EE-4211-B1C5-C86008A93F11}</Project>
       <Name>October.DataAcess.DataAcessService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\October.Modules.SystemManager\October.Modules.SystemManager.csproj">
+      <Project>{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}</Project>
+      <Name>October.Modules.SystemManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

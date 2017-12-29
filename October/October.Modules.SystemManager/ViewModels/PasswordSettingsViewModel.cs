@@ -1,4 +1,5 @@
-﻿using October.Basic.Common;
+﻿using Microsoft.Practices.Unity;
+using October.Basic.Common;
 using October.Basic.Contracts;
 using October.Basic.Models;
 using Prism.Commands;
@@ -11,7 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using Unity;
 
 namespace October.Modules.SystemManager
 {
