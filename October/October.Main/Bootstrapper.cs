@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using October.Basic.Contracts;
+using October.Basic.Models;
 using October.DataAcess.DataAcessService;
 using October.Main;
 using October.Main.Views;
@@ -43,6 +44,8 @@ namespace October.Main
             Container.RegisterType<MainWindow>();
 
             Container.RegisterType<IMenu, MenuService>(new ContainerControlledLifetimeManager());
+
+            Container.RegisterType<PopWindowInfoEntity, SystemManagerWindowInfoEntity>(SystemManagerParameterNames.PasswordSettings);
             base.ConfigureContainer();
 
             

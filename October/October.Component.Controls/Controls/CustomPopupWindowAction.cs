@@ -35,7 +35,6 @@ namespace October.Component.Controls
         {
             if (this.WindowContent != null)
             {
-
                 IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();
                 _window = container.Resolve<PopWindow>();
                 Dictionary<string, object> args = notification.Content as Dictionary<string, object>;
@@ -52,7 +51,7 @@ namespace October.Component.Controls
             else
             {
                 _window = this.CreateDefaultWindow(notification);
-            }
+            }            
             return _window;
         }
     }
