@@ -12,6 +12,7 @@ namespace October.Component.BimViewer.Controls
 {
     public partial class AxRenderUc : UserControl
     {
+        string id = string.Empty;
         public AxRenderUc()
         {
             InitializeComponent();
@@ -50,7 +51,13 @@ namespace October.Component.BimViewer.Controls
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            axBIM3DViewer1.OpenFile(@"D:\2016\package\projects\CodeRepository\EBIMWorks1.0\B3DModel\CATIA_铁路桥.b3d");
+            id = axBIM3DViewer1.OpenFile(@"D:\2016\package\projects\CodeRepository\EBIMWorks1.0\B3DModel\CATIA_铁路桥.b3d");
+        }
+
+        protected override void DestroyHandle()
+        {
+            base.DestroyHandle();
+            axBIM3DViewer1.RemoveModel(id);
         }
 
         /// <summary>
