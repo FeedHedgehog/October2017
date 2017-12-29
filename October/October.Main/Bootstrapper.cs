@@ -34,21 +34,20 @@ namespace October.Main
 
         protected override void ConfigureModuleCatalog()
         {
+            base.ConfigureModuleCatalog();
             var catalog = (ModuleCatalog)ModuleCatalog;
             catalog.AddModule(typeof(SystemManagerModule));
         }
 
         protected override void ConfigureContainer()
         {
+            base.ConfigureContainer();
             Container.RegisterType<LoginWindow>();
             Container.RegisterType<MainWindow>();
 
             Container.RegisterType<IMenu, MenuService>(new ContainerControlledLifetimeManager());
 
-            Container.RegisterType<PopWindowInfoEntity, SystemManagerWindowInfoEntity>(SystemManagerParameterNames.PasswordSettings);
-            base.ConfigureContainer();
-
-            
+            Container.RegisterType<PopWindowInfoEntity, SystemManagerWindowInfoEntity>(SystemManagerParameterNames.PasswordSettings);                        
         }
 
         protected override void ConfigureViewModelLocator()

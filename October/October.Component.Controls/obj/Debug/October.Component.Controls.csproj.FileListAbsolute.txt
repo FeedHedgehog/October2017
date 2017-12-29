@@ -39,7 +39,6 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\obj\Debug\Assets\Window\PopWindowStyle.baml
-D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\CommonServiceLocator.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\October.Basic.Common.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\October.Basic.Contracts.dll
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\October.Basic.Models.dll
@@ -54,3 +53,6 @@ D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.Unity.xml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\2016\package\projects\EBIM\wpf\October\October\October.Component.Controls\bin\Debug\Microsoft.Practices.ServiceLocation.xml

@@ -1,5 +1,4 @@
 ﻿using Common.WPF.Helpers;
-using CommonServiceLocator;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using October.Basic.Common;
