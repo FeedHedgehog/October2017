@@ -6,11 +6,14 @@
         xmlns:local="clr-namespace:October.Component.Controls"
         xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
         xmlns:prism="http://prismlibrary.com/"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         mc:Ignorable="d" 
         x:Name="popWindow"
         Style="{DynamicResource PopWindowStyle}"
         prism:ViewModelLocator.AutoWireViewModel="True">
-    <Grid>
-
-    </Grid>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Path=LoadCommand, Mode=OneTime}" CommandParameter="{Binding ElementName=popWindow}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
 </local:BaseWindow>

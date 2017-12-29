@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "October.Basic.Contracts", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "October.DataAcess.DataAcessService", "October.DataAcess.DataAcessService\October.DataAcess.DataAcessService.csproj", "{34BEA65C-C5EE-4211-B1C5-C86008A93F11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "October.Modules.SystemManager", "October.Modules.SystemManager\October.Modules.SystemManager.csproj", "{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,14 @@ Global
 		{34BEA65C-C5EE-4211-B1C5-C86008A93F11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34BEA65C-C5EE-4211-B1C5-C86008A93F11}.Release|x64.ActiveCfg = Release|Any CPU
 		{34BEA65C-C5EE-4211-B1C5-C86008A93F11}.Release|x64.Build.0 = Release|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Debug|x64.Build.0 = Debug|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Release|x64.ActiveCfg = Release|Any CPU
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,5 +117,6 @@ Global
 		{A0A88BCD-9A2A-458C-88C0-4ECD9C64BF05} = {E0495822-26D4-4423-895C-99DC6EF96C2F}
 		{C425578D-C626-4AA0-9F4E-3AE99AE734D0} = {E0495822-26D4-4423-895C-99DC6EF96C2F}
 		{34BEA65C-C5EE-4211-B1C5-C86008A93F11} = {51D9D64D-8036-435E-BB58-24E30787BB16}
+		{D8AEA3F8-4E2F-4EBE-BA73-B3780A498C64} = {593C56A6-7E56-4C1A-95E1-7E968CA5976B}
 	EndGlobalSection
 EndGlobal
