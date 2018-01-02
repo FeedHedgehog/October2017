@@ -298,7 +298,7 @@ namespace October.Main.ViewModels
                 this.CustomPopupViewRequestDict.Add(menuItem.code, request);
 
                 interactionRequestTrigger.SourceObject = this.CustomPopupViewRequestDict[menuItem.code];
-                System.Windows.Interactivity.Interaction.GetTriggers(Application.Current.MainWindow).Add(interactionRequestTrigger);//这里必须把MainWindow设置未Application.cureent
+                System.Windows.Interactivity.Interaction.GetTriggers(Application.Current.MainWindow).Add(interactionRequestTrigger);//这里必须把MainWindow设置为Application.cureent
                 this._windowActions.Add(customPopupWindowAction);
             }
             PopWindowInfoEntity popWindowInfo = _container.Resolve<PopWindowInfoEntity>(menuItem.code);
@@ -331,10 +331,10 @@ namespace October.Main.ViewModels
         }
 
         private void CloseWindow()
-        {            
-            System.GC.Collect();
+        {                       
             foreach (CustomPopupWindowAction windowAction in this._windowActions)
                 windowAction.CloseWindow();
+            System.GC.Collect();
         }
     }
 }

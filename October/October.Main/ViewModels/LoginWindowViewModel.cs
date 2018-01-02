@@ -45,7 +45,7 @@ namespace October.Main.ViewModels
 
             mainWin.WindowState = WindowState.Maximized;
             Application.Current.MainWindow = mainWin;
-            CloseAction();//根据客户要求，先关闭登录窗口，再加载动画by wwb 17/6/8
+            CloseAction();//先关闭登录窗口，再加载动画
             //显示加载动画
             //ServiceLocator.Current.GetInstance<EventAggregator>().GetEvent<ShowWaitIndicatorEvent>().Publish(false);
             mainWin.Show();

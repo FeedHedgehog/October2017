@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         ResizeMode="CanResize" 
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="LoginWindow" Height="300" Width="300">
+        Title="LoginWindow" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>    
         <Button x:Name="BtnLogin" Command="{Binding LoginCommand}" ></Button>
     </Grid>
