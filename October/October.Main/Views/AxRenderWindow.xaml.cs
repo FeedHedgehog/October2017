@@ -1,4 +1,7 @@
-﻿using October.Component.BimViewer.Controls;
+﻿using Microsoft.Practices.ServiceLocation;
+using October.Basic.Common;
+using October.Component.BimViewer.Controls;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +33,7 @@ namespace October.Main.Views
 
         private void AxRenderWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<ActiveMainWindowEvent>().Publish(null);
         }
     }
 }

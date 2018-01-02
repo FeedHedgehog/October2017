@@ -215,16 +215,16 @@ namespace October.Main.ViewModels
             childMenuItemEntity.id = Convert.ToInt32(2);
             childMenuItemEntity.code = "PasswordSettings";
             childMenuItemEntity.name = "修改密码";
-            MenuItemEntity child1MenuItemEntity = new MenuItemEntity();
-            child1MenuItemEntity.id = Convert.ToInt32(1);
-            child1MenuItemEntity.code = "PersonalInfo";
-            child1MenuItemEntity.name = "修改资料";
+            MenuItemEntity childMenuItemEntity1 = new MenuItemEntity();
+            childMenuItemEntity1.id = Convert.ToInt32(1);
+            childMenuItemEntity1.code = "PersonalInfo";
+            childMenuItemEntity1.name = "修改资料";
             MenuItemEntity menuItemEntity = new MenuItemEntity();
             menuItemEntity.id = Convert.ToInt32(0);
             menuItemEntity.code = "currentUser";
             menuItemEntity.name = "管理员";
             menuItemEntity.children.Add(childMenuItemEntity);
-            menuItemEntity.children.Add(child1MenuItemEntity);
+            menuItemEntity.children.Add(childMenuItemEntity1);
 
             UserMenuList.Add(menuItemEntity);
             RaisePropertyChanged("UserMenuList");

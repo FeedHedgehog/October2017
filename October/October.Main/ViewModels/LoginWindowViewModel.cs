@@ -1,7 +1,9 @@
 ﻿using Common.WPF.Helpers;
 using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Unity;
 using October.Main.Views;
 using Prism.Commands;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,13 +38,14 @@ namespace October.Main.ViewModels
 
         private void ShowMainWindowAndAxWindow()
         {
-            MainWindow mainWin = ServiceLocator.Current.GetInstance<MainWindow>();
+            IUnityContainer container = ServiceLocator.Current.GetInstance<IUnityContainer>();
+            MainWindow mainWin = container.Resolve<MainWindow>();
             //mainWin.Topmost = true;
             FullScreenHelper.RepairWpfWindowFullScreenBehavior(mainWin);
 
             mainWin.WindowState = WindowState.Maximized;
             Application.Current.MainWindow = mainWin;
-            CloseAction();//根据客户要求，先关闭登录窗口，再加载动画
+            CloseAction();//根据客户要求，先关闭登录窗口，再加载动画by wwb 17/6/8
             //显示加载动画
             //ServiceLocator.Current.GetInstance<EventAggregator>().GetEvent<ShowWaitIndicatorEvent>().Publish(false);
             mainWin.Show();
