@@ -97,9 +97,9 @@
         <Grid  Panel.ZIndex="0" Height="{Binding MenuItemActualHeight}" 
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Top"   >
-            <!--<Grid.Background>
+            <Grid.Background>
                 <ImageBrush ImageSource="{DynamicResource bg_topbarmenu}"/>
-            </Grid.Background>-->
+            </Grid.Background>
         </Grid>
 
 
@@ -156,45 +156,45 @@
                             <Style BasedOn="{StaticResource UserMenuItemStyle}" TargetType="{x:Type MenuItem}"/>
                         </Menu.ItemContainerStyle>
                     </Menu>
-                    <ComboBox x:Name="backlog" Style="{StaticResource TSpeedButtonStyle}" Margin="0 8 0 0"
+                    <!--<ComboBox x:Name="backlog" Style="{StaticResource TSpeedButtonStyle}" Margin="0 8 0 0"
                               IsDropDownOpen="{Binding BacklogIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_daiban_act}"
                               acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_daiban}"                              
                               ToolTip="待办事项">
-                        <!--<acControls:ControlAttachProperty.CustomContent>
+                        <acControls:ControlAttachProperty.CustomContent>
                             <acControls:Backlog x:Name="backlogContent" Height="{Binding ElementName=Content,Path=ActualHeight}" />
-                        </acControls:ControlAttachProperty.CustomContent>-->
-                    </ComboBox>
-                    <ComboBox x:Name="alertList" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
+                        </acControls:ControlAttachProperty.CustomContent>
+                    </ComboBox>-->
+                    <!--<ComboBox x:Name="alertList" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
                               IsDropDownOpen="{Binding AlertListIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_gonggao_act}"
                               acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_gonggao}"
                               
                               
                               ToolTip="报警列表">
-                        <!--<acControls:ControlAttachProperty.CustomContent>
+                        <acControls:ControlAttachProperty.CustomContent>
                             <acControls:AlertList x:Name="alertContent" Height="{Binding ElementName=Content,Path=ActualHeight}" />
-                        </acControls:ControlAttachProperty.CustomContent>-->
-                    </ComboBox>
-                    <ComboBox x:Name="systemNotice" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
+                        </acControls:ControlAttachProperty.CustomContent>
+                    </ComboBox>-->
+                    <!--<ComboBox x:Name="systemNotice" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
                               IsDropDownOpen="{Binding SystemNoticeIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_xinfeng_act}"
                               acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_xinfeng}"                              
                               ToolTip="系统公告">
-                        <!--<acControls:ControlAttachProperty.CustomContent>
+                        <acControls:ControlAttachProperty.CustomContent>
                             <acControls:SystemNotice x:Name="systemNoticeContent"  Height="{Binding ElementName=Content,Path=ActualHeight}" />
-                        </acControls:ControlAttachProperty.CustomContent>-->
-                    </ComboBox>
-                    <ComboBox x:Name="schedule" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
+                        </acControls:ControlAttachProperty.CustomContent>
+                    </ComboBox>-->
+                    <!--<ComboBox x:Name="schedule" Style="{StaticResource TSpeedButtonStyle}" Margin="15 8 0 0"
                               IsDropDownOpen="{Binding WorkScheduleIsChecked,Mode=TwoWay}"
                               acControls:ControlAttachProperty.ImgBtnCheckedSource="{DynamicResource ic_NFCBar_rili_act}"
                               acControls:ControlAttachProperty.ImgBtnNormalSource="{DynamicResource ic_NFCBar_rili}"
                               acControls:ControlAttachProperty.HasInfos="False"
                               ToolTip="工作日程">
-                        <!--<acControls:ControlAttachProperty.CustomContent>
+                        <acControls:ControlAttachProperty.CustomContent>
                             <acControls:Schedule Height="{Binding ElementName=Content,Path=ActualHeight}" />
-                        </acControls:ControlAttachProperty.CustomContent>-->
-                    </ComboBox>
+                        </acControls:ControlAttachProperty.CustomContent>
+                    </ComboBox>-->
 
                     <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
                                       ImageHeight="20" ImageWidth="20" Margin="15 8 0 0"
@@ -205,7 +205,7 @@
                 </StackPanel>
 
                 <acControls:ImageToggleButton Style="{DynamicResource ImageToggleButtonStyle}"
-                            ImageHeight="24" ImageWidth="24" Margin="15 8 0 0" MouseLeftButtonDown="ImageToggleButton_MouseLeftButtonDown"
+                            ImageHeight="24" ImageWidth="24" Margin="15 8 0 0" 
                             NormalImage="{DynamicResource btn_WinMinNormal}"
                             HoverImage="{DynamicResource btn_WinMinHover}"
                             Command="{Binding StatusChangeCommand}"

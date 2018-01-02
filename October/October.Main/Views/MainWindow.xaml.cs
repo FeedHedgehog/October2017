@@ -137,10 +137,5 @@ namespace October.Main.Views
                     break;
             }
         }
-
-        private void ImageToggleButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
     }
 }
