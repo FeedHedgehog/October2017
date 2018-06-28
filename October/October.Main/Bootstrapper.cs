@@ -44,7 +44,6 @@ namespace October.Main
             base.ConfigureContainer();
             Container.RegisterType<LoginWindow>();
             Container.RegisterType<MainWindow>();
-
             Container.RegisterType<IMenu, MenuService>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<PopWindowInfoEntity, SystemManagerWindowInfoEntity>(SystemManagerParameterNames.PasswordSettings);                        
