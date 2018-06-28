@@ -159,7 +159,7 @@ namespace October.Component.Controls
         private void Close()
         {
             _regionManager.Regions[PopWindowInfo.RegionName].RemoveAll();
-            _currentView.Journal.Clear();
+            //_currentView.Journal.Clear();
             _currentView = null;
             RegionManager.UpdateRegions();
             _regionManager.Regions[PopWindowInfo.RegionName].NavigationService.Navigated -= NavigationService_Navigated;
